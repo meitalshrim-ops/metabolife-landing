@@ -699,17 +699,10 @@
           <h2 class="section-title">אני רוצה את ההדרכה <span style="color: var(--brand-green);">בחינם</span></h2>
           <p>השאירו פרטים וההדרכה תישלח אליכם למייל מיד.</p>
         </div>
-        <form data-lead-form data-form-id="top">
-          <input type="text" name="name" required placeholder="שם מלא" />
-          <input type="email" name="email" required placeholder="כתובת מייל" />
-          <input type="tel" name="phone" required placeholder="טלפון נייד" />
-          <button type="submit" class="btn-cta" data-submit-btn>
-            <span>אני רוצה את ההדרכה בחינם</span>
-            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-          </button>
-          <p class="form-error" data-form-error style="display:none;"></p>
-          <p class="form-privacy">🔒 הפרטים שלכם מאובטחים. בלי ספאם, מבטיחה.</p>
-        </form>
+        <div class="ravpage-form">
+          <script type='text/javascript' src='//form2.ravpage.co.il/11efe376b4e0dc6337e993a4c6738a7f6A0AE477' charset='UTF-8'></script>
+        </div>
+        <p class="form-privacy">🔒 הפרטים שלכם מאובטחים. בלי ספאם, מבטיחה.</p>
       </div>
     </div>
   </section>
@@ -784,17 +777,10 @@
           <p class="inside-eyebrow">✦ מוכנים להתחיל? ✦</p>
           <h2 class="section-title">כן, אני רוצה להתחיל שינוי אמיתי</h2>
         </div>
-        <form data-lead-form data-form-id="bottom">
-          <input type="text" name="name" required placeholder="שם מלא" />
-          <input type="email" name="email" required placeholder="כתובת מייל" />
-          <input type="tel" name="phone" required placeholder="טלפון נייד" />
-          <button type="submit" class="btn-cta" data-submit-btn>
-            <span>כן, אני רוצה להתחיל שינוי אמיתי</span>
-            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-          </button>
-          <p class="form-error" data-form-error style="display:none;"></p>
-          <p class="form-privacy">🔒 הפרטים שלכם מאובטחים. בלי ספאם, מבטיחה.</p>
-        </form>
+        <div class="ravpage-form">
+          <script type='text/javascript' src='//form2.ravpage.co.il/11efe376b4e0dc6337e993a4c6738a7f6A0AE477' charset='UTF-8'></script>
+        </div>
+        <p class="form-privacy">🔒 הפרטים שלכם מאובטחים. בלי ספאם, מבטיחה.</p>
       </div>
     </div>
   </section>
@@ -830,67 +816,7 @@
     }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
     fadeEls.forEach((el) => io.observe(el));
 
-    // Form submission
-    document.querySelectorAll("[data-lead-form]").forEach((form) => {
-      form.addEventListener("submit", async (e) => {
-        e.preventDefault();
-        const errorEl = form.querySelector("[data-form-error]");
-        const btn = form.querySelector("[data-submit-btn]");
-        const card = form.closest("[data-form-card]");
-        errorEl.style.display = "none";
-        btn.disabled = true;
-        btn.style.opacity = "0.6";
-        btn.querySelector("span").textContent = "שולחת...";
-
-        const data = {
-          name: form.name.value,
-          email: form.email.value,
-          phone: form.phone.value,
-          source: form.dataset.formId,
-          timestamp: new Date().toISOString(),
-        };
-
-        // ⚠️ כאן תחבר את רב מסר אחר כך:
-        // 1. תקבלי מ-רב מסר את הקוד של הטופס שלהם
-        // 2. תחליפי את ה-fetch הזה ב-fetch לכתובת שלהם
-        // 3. או תשתמשי בטופס iframe שלהם במקום
-
-        try {
-          // לעת עתה: שמירה מקומית ב-localStorage כגיבוי
-          const leads = JSON.parse(localStorage.getItem("metabolife_leads") || "[]");
-          leads.push(data);
-          localStorage.setItem("metabolife_leads", JSON.stringify(leads));
-          console.log("[NEW LEAD]", data);
-
-          // ירי אירוע Lead לפיקסל פייסבוק
-          if (typeof fbq === 'function') {
-            fbq('track', 'Lead', {
-              content_name: 'מדריך הרזיה',
-              source: form.dataset.formId,
-            });
-          }
-
-          // תצוגת הצלחה
-          card.innerHTML = `
-            <div class="success-card">
-              <div class="success-icon">
-                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
-              </div>
-              <h2>נרשמתם בהצלחה! 💚</h2>
-              <p>ההדרכה בדרך אליכם למייל ברגעים אלה.<br>אם לא ראיתם אותה תוך 5 דקות, בדקו בתיקיית הספאם.</p>
-              <p class="success-sign">באהבה רבה,<br><strong>מיטל שרים</strong></p>
-            </div>
-          `;
-          card.scrollIntoView({ behavior: "smooth", block: "center" });
-        } catch (err) {
-          errorEl.textContent = "שגיאה בשליחה. נסי שוב.";
-          errorEl.style.display = "block";
-          btn.disabled = false;
-          btn.style.opacity = "1";
-          btn.querySelector("span").textContent = form.dataset.formId === "bottom" ? "כן, אני רוצה להתחיל שינוי אמיתי" : "אני רוצה את ההדרכה בחינם";
-        }
-      });
-    });
+    // הטפסים מוטמעים דרך רב מסר (script tags למעלה). הם מטפלים בעצמם בהגשה והמרה.
   </script>
 
 </body>
