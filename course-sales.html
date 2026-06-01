@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>שליטה באכילה בלי מלחמות | הקורס הדיגיטלי של מטבולייף - מיטל שרים</title>
+  <meta name="description" content="הקורס שיעזור לכם להפסיק להתחיל דיאטה מחדש כל יום ראשון, להתמיד לאורך זמן ולחזור לשליטה מול האוכל. בלי צומות, בלי ספירת קלוריות ובלי להעניש את הגוף." />
+
+  <meta property="og:title" content="שליטה באכילה בלי מלחמות | מטבולייף - מיטל שרים" />
+  <meta property="og:description" content="הקורס הדיגיטלי שמחזיר לכם שליטה מול האוכל, בלי דיאטות סבל." />
+  <meta property="og:image" content="https://meitalshrim-ops.github.io/metabolife-landing/images/metabolife-logo.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="he_IL" />
+
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '999361456096337');
+  fbq('track', 'PageView');
+  fbq('track', 'ViewContent', {content_name: 'קורס שליטה באכילה בלי מלחמות'});
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=999361456096337&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --brand-blue: #1E3A8A;
+      --brand-blue-dark: #172554;
+      --brand-green: #10B981;
+      --brand-green-dark: #059669;
+      --brand-purple: #7C3AED;
+      --brand-purple-light: #A78BFA;
+      --brand-cream: #FAF7F2;
+      --brand-cream-warm: #F5EFE6;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: "Heebo", system-ui, -apple-system, sans-serif;
+      background: var(--brand-cream);
+      color: var(--brand-blue);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    .container { max-width: 880px; margin: 0 auto; padding: 0 20px; }
+    .narrow { max-width: 720px; }
+
+    /* HEADER */
+    .header { background: white; border-bottom: 1px solid rgba(30,58,138,0.05); padding: 16px 0; position: sticky; top: 0; z-index: 50; }
+    .header-inner { display: flex; justify-content: center; align-items: center; }
+    .header-logo { height: 72px; width: auto; object-fit: contain; }
+    @media (max-width: 640px) { .header-logo { height: 58px; } }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(135deg, var(--brand-blue) 0%, var(--brand-purple) 50%, var(--brand-green) 100%);
+      padding: 64px 20px 72px; text-align: center; color: white; position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content: ""; position: absolute; inset: 0;
+      background: radial-gradient(circle at 20% 25%, rgba(255,255,255,0.15) 0%, transparent 42%),
+                  radial-gradient(circle at 82% 75%, rgba(255,255,255,0.12) 0%, transparent 42%);
+      pointer-events: none;
+    }
+    .hero-content { position: relative; z-index: 1; }
+    .hero .eyebrow {
+      display: inline-block; background: rgba(255,255,255,0.16); border: 1px solid rgba(255,255,255,0.4);
+      padding: 7px 20px; border-radius: 999px; font-size: 15px; font-weight: 700; margin-bottom: 22px; letter-spacing: 0.5px;
+    }
+    .hero h1 { font-size: clamp(30px, 5vw, 50px); font-weight: 900; line-height: 1.12; margin-bottom: 18px; letter-spacing: -0.01em; }
+    .hero h1 .nm { display: block; font-size: clamp(20px, 3vw, 28px); font-weight: 700; opacity: 0.92; margin-bottom: 8px; }
+    .hero .sub { font-size: clamp(16px, 2vw, 19px); opacity: 0.95; max-width: 640px; margin: 0 auto 30px; line-height: 1.7; }
+    .hero .sub strong { font-weight: 800; }
+
+    .icons { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-bottom: 34px; }
+    .icon-chip {
+      display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.14);
+      border: 1px solid rgba(255,255,255,0.35); padding: 11px 20px; border-radius: 14px; font-weight: 700; font-size: 15px;
+    }
+    .icon-chip svg { width: 18px; height: 18px; flex-shrink: 0; }
+
+    .cta-btn {
+      display: inline-flex; align-items: center; gap: 10px; padding: 18px 40px;
+      background: white; color: var(--brand-purple); border-radius: 999px; font-weight: 900; font-size: clamp(17px, 2vw, 20px);
+      box-shadow: 0 14px 34px rgba(0,0,0,0.28); transition: all 0.2s;
+    }
+    .cta-btn:hover { transform: translateY(-3px); box-shadow: 0 20px 42px rgba(0,0,0,0.32); }
+    .cta-btn.green { background: var(--brand-green); color: white; }
+
+    /* SECTIONS */
+    section.block { padding: 60px 0; }
+    section.block.white { background: white; }
+    section.block.cream { background: var(--brand-cream); }
+    .section-title { font-size: clamp(24px, 3.4vw, 36px); font-weight: 900; color: var(--brand-blue); text-align: center; margin-bottom: 14px; line-height: 1.2; letter-spacing: -0.01em; }
+    .section-title .pop { color: var(--brand-purple); }
+    .section-lead { font-size: 17px; color: rgba(30,58,138,0.82); text-align: center; max-width: 660px; margin: 0 auto 34px; line-height: 1.7; }
+    .prose p { font-size: 17px; color: rgba(30,58,138,0.86); line-height: 1.8; margin-bottom: 16px; max-width: 720px; margin-left: auto; margin-right: auto; }
+    .prose p.em { font-weight: 800; color: var(--brand-blue); text-align: center; font-size: 19px; }
+
+    /* PAIN LIST */
+    .pain-list { max-width: 640px; margin: 0 auto; display: grid; gap: 12px; }
+    .pain-item { background: var(--brand-cream); border-right: 5px solid var(--brand-purple); border-radius: 14px; padding: 16px 20px; font-size: 16.5px; font-weight: 600; color: var(--brand-blue); display: flex; gap: 12px; align-items: flex-start; }
+    .pain-item .x { color: var(--brand-purple); font-weight: 900; flex-shrink: 0; }
+    section.block.white .pain-item { background: var(--brand-cream); }
+
+    /* DIFFERENT / METHOD */
+    .method-grid { display: grid; gap: 18px; max-width: 760px; margin: 0 auto; }
+    @media (min-width: 720px){ .method-grid { grid-template-columns: 1fr 1fr; } }
+    .method-card { background: white; border-radius: 22px; padding: 28px 26px; box-shadow: 0 14px 40px -12px rgba(30,58,138,0.16); border-top: 4px solid var(--brand-green); }
+    .method-card:nth-child(2){ border-top-color: var(--brand-purple); }
+    .method-card h3 { font-size: 21px; font-weight: 900; color: var(--brand-blue); margin-bottom: 10px; }
+    .method-card p { font-size: 15.5px; color: rgba(30,58,138,0.85); line-height: 1.7; }
+
+    /* TESTIMONIAL VIDEOS */
+    .vids { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; max-width: 820px; margin: 0 auto; }
+    @media (min-width: 760px){ .vids { grid-template-columns: repeat(3, 1fr); } }
+    .vid-card { background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 12px 34px -10px rgba(30,58,138,0.18); display: flex; flex-direction: column; }
+    .vid-card video { width: 100%; aspect-ratio: 9/16; object-fit: cover; background: #000; display: block; }
+    .vid-cap { padding: 14px 16px; text-align: center; }
+    .vid-cap .nm { font-size: 17px; font-weight: 900; color: var(--brand-blue); }
+    .vid-cap .role { font-size: 13.5px; color: var(--brand-green-dark); font-weight: 700; margin-top: 3px; }
+
+    /* LEARN LIST */
+    .learn { max-width: 680px; margin: 0 auto; display: grid; gap: 11px; }
+    .learn-item { display: flex; gap: 12px; align-items: flex-start; font-size: 16.5px; color: var(--brand-blue); font-weight: 600; background: white; border-radius: 13px; padding: 14px 18px; box-shadow: 0 4px 14px rgba(30,58,138,0.05); }
+    .learn-item .ck { flex-shrink: 0; width: 24px; height: 24px; background: var(--brand-green); border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+    .learn-item .ck svg { width: 14px; height: 14px; color: white; }
+
+    /* INSIDE */
+    .inside { max-width: 640px; margin: 0 auto; display: grid; gap: 12px; }
+    .inside-item { background: linear-gradient(135deg, #F4EFFF, #EAF6FF); border-radius: 14px; padding: 15px 20px; font-size: 16px; font-weight: 700; color: var(--brand-blue); display: flex; gap: 12px; align-items: center; }
+    .inside-item.bonus { background: linear-gradient(135deg, #ECFDF5, #D6FBE8); border: 1px solid #6EE7B7; }
+    .inside-item .ic { font-size: 22px; flex-shrink: 0; }
+
+    /* ABOUT */
+    .about-card { background: white; border-radius: 28px; padding: 38px 30px; max-width: 820px; margin: 0 auto; box-shadow: 0 20px 60px -14px rgba(30,58,138,0.16); border-right: 4px solid var(--brand-green); display: grid; grid-template-columns: 1fr; gap: 28px; align-items: center; }
+    @media (min-width: 760px){ .about-card { grid-template-columns: 230px 1fr; gap: 34px; } }
+    .about-img { aspect-ratio: 4/5; background: var(--brand-cream); border-radius: 18px; overflow: hidden; max-width: 230px; margin: 0 auto; }
+    .about-img img { width: 100%; height: 100%; object-fit: cover; }
+    .about-text h3 { font-size: 24px; font-weight: 900; color: var(--brand-blue); margin-bottom: 12px; }
+    .about-text p { font-size: 16px; color: rgba(30,58,138,0.85); line-height: 1.75; }
+
+    /* FINAL CTA */
+    .final {
+      background: linear-gradient(135deg, var(--brand-blue) 0%, var(--brand-purple) 55%, var(--brand-green) 100%);
+      color: white; text-align: center; padding: 70px 20px;
+    }
+    .final h2 { font-size: clamp(26px, 4vw, 40px); font-weight: 900; line-height: 1.2; margin-bottom: 18px; }
+    .final p { font-size: 17px; opacity: 0.95; max-width: 620px; margin: 0 auto 18px; line-height: 1.75; }
+    .final .lines { font-size: 17px; font-weight: 700; margin: 0 auto 30px; max-width: 560px; line-height: 1.9; opacity: 0.96; }
+
+    .signoff { text-align: center; padding: 36px 20px; background: white; }
+    .signoff .it { font-style: italic; color: rgba(30,58,138,0.7); font-size: 16px; }
+    .signoff .nm { font-size: 20px; font-weight: 900; color: var(--brand-blue); margin-top: 4px; }
+    .signoff .role { font-size: 14px; color: rgba(30,58,138,0.6); margin-top: 2px; }
+
+    .footer { background: var(--brand-blue-dark); color: rgba(255,255,255,0.55); padding: 24px 20px; text-align: center; font-size: 13px; }
+    .footer .tag { font-size: 15px; color: rgba(255,255,255,0.85); font-weight: 600; margin-bottom: 8px; }
+
+    @media (max-width: 640px){
+      section.block { padding: 48px 0; }
+      .hero { padding: 50px 18px 60px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-inner container">
+      <img src="images/metabolife-logo.png" alt="מטבולייף - מיטל שרים" class="header-logo" />
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-content">
+      <span class="eyebrow">הקורס הדיגיטלי של מטבולייף</span>
+      <h1>
+        <span class="nm">שליטה באכילה בלי מלחמות</span>
+        סוף סוף יש דרך לרדת במשקל בלי לגווע ברעב, ובלי לעלות את הכל בחזרה אחרי החגים
+      </h1>
+      <p class="sub">
+        איך תזונה ש<strong>מזרזת חילוף חומרים ומחזירה את הגוף למצב שריפת שומן</strong> עזרה כבר ליותר מ-<strong>5,000 נשים וגברים בני 40 ומעלה</strong> לחזור לשליטה מול האוכל. בלי לאבד מסת שריר, בלי לרדת "רק נוזלים", ובלי האיסורים שגרמו לכם לוותר בדיאטות קודמות.
+      </p>
+      <div class="icons">
+        <span class="icon-chip"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>בלי ספירת קלוריות</span>
+        <span class="icon-chip"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>בלי צום וקיזוזים</span>
+        <span class="icon-chip"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>מתאים לסופי שבוע וחגים</span>
+      </div>
+      <a href="https://wa.me/972543192961?text=הי%20מיטל%2C%20אני%20רוצה%20להצטרף%20לקורס%20שליטה%20באכילה%20בלי%20מלחמות" class="cta-btn" target="_blank" rel="noopener">כן, אני רוצה להצטרף לקורס</a>
+    </div>
+  </section>
+
+  <!-- WHY -->
+  <section class="block white">
+    <div class="container narrow">
+      <h2 class="section-title">למה הגוף שלכם כבר <span class="pop">לא שורף שומן</span> אחרי גיל 40?</h2>
+      <div class="prose">
+        <p>אם השבוע שלכם מתחיל טוב, ואז מגיע שישי, שבת, חג, אירוע, סטרס או חשק למתוק, ופתאום הכל מתפרק, אתם לא לבד. רוב האנשים לא נשברים כי אין להם כוח רצון. הם פשוט מנסים לרדת במשקל בדרך שלא מתאימה לחיים האמיתיים שלהם.</p>
+        <p>האמת היא שכל דיאטה רגילה שניסיתם עד היום עשתה לגוף בדיוק את ההפך ממה שהוא צריך. היא האטה את קצב חילוף החומרים, פירקה מסת שריר, והורידה בעיקר נוזלים. כל דיאטה של רעב והגבלות גונבת מהגוף את התנאים שהוא צריך כדי לשרוף שומן, ולכן אחרי כל ירידה מהירה מגיעה עלייה בחזרה, לפעמים אפילו עם תוספת.</p>
+        <p class="em">הבעיה היא לא אתם. הבעיה היא השיטה.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOR YOU IF -->
+  <section class="block cream">
+    <div class="container">
+      <h2 class="section-title">זה בדיוק בשבילכם אם:</h2>
+      <div class="pain-list">
+        <div class="pain-item"><span class="x">✓</span>אתם מתחילים דיאטה כל יום ראשון מחדש</div>
+        <div class="pain-item"><span class="x">✓</span>יש לכם חשקים למתוק, לבצקים ולנשנושים</div>
+        <div class="pain-item"><span class="x">✓</span>בסופי שבוע, חגים ואירועים קשה לכם לעצור</div>
+        <div class="pain-item"><span class="x">✓</span>אחרי נפילה אתם אומרים "הרסתי הכל" וממשיכים לאכול</div>
+        <div class="pain-item"><span class="x">✓</span>אתם אוכלים מעט כל היום ואז בערב מאבדים שליטה</div>
+        <div class="pain-item"><span class="x">✓</span>ניסיתם דיאטות, תפריטים וספירת קלוריות, וזה פשוט לא החזיק</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIFFERENT / METHOD -->
+  <section class="block white">
+    <div class="container">
+      <h2 class="section-title">מה הופך את הקורס הזה <span class="pop">לשונה</span> מכל מה שניסיתם?</h2>
+      <p class="section-lead">אני לא מאמינה בדיאטות סבל, ברעב או בספירת קלוריות. אני מלמדת שיטה שעובדת אחרת לגמרי:</p>
+      <div class="method-grid">
+        <div class="method-card">
+          <h3>🔥 זירוז חילוף חומרים בתזונה בלבד</h3>
+          <p>בלי תוספים ובלי טיפות. אנחנו גורמים לאוכל להתעכל מהר ולהוציא פסולת, כך שהגוף חוזר למצב של שריפת שומן ושאריות לא הופכות לשומן.</p>
+        </div>
+        <div class="method-card">
+          <h3>🌿 תזונה הורמונלית מותאמת</h3>
+          <p>כשההורמונים לא מאוזנים, הגוף מבקש עוד מתוק ועוד בצק ואוגר שומן בבטן. תזונה הורמונלית מאזנת אינסולין, קורטיזול ובלוטת התריס. אצל נשים מעלה אסטרוגן ופרוגסטרון, ואצל גברים טסטוסטרון. התוצאה: פחות חשקים, מצב רוח יציב, והגוף שורף שומן במקום לאגור.</p>
+        </div>
+      </div>
+      <p class="prose" style="text-align:center;margin-top:24px;font-weight:800;color:var(--brand-blue)">זה מה שאין בדיאטות הרגילות, וזה בדיוק מה שמחזיר לגוף את היכולת לשרוף שומן גם אחרי גיל 40.</p>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="block cream">
+    <div class="container">
+      <h2 class="section-title">זה לא תיאוריה. <span class="pop">זה כבר עבד</span> לאלפי אנשים</h2>
+      <p class="section-lead">במשך 15 שנה ליוויתי יותר מ-5,000 נשים וגברים. הנה כמה מהם מספרים בעצמם:</p>
+      <div class="vids">
+        <div class="vid-card">
+          <video src="videos/orit.mp4" controls preload="metadata" playsinline></video>
+          <div class="vid-cap"><div class="nm">אורית גלבר</div><div class="role">ירדה 90 ק"ג ושומרת 12 שנה</div></div>
+        </div>
+        <div class="vid-card">
+          <video src="videos/edina.mp4" controls preload="metadata" playsinline></video>
+          <div class="vid-cap"><div class="nm">עדינה עזרא</div><div class="role">מ-28 יחידות אינסולין לאיזון בתזונה</div></div>
+        </div>
+        <div class="vid-card">
+          <video src="videos/sara.mp4" controls preload="metadata" playsinline></video>
+          <div class="vid-cap"><div class="nm">שרה</div><div class="role">בת 80, אף פעם לא מאוחר</div></div>
+        </div>
+        <div class="vid-card">
+          <video src="videos/bar.mp4" controls preload="metadata" playsinline></video>
+          <div class="vid-cap"><div class="nm">בר מייזל</div><div class="role">ירדה 17 ק"ג</div></div>
+        </div>
+        <div class="vid-card">
+          <video src="videos/rafael.mp4" controls preload="metadata" playsinline></video>
+          <div class="vid-cap"><div class="nm">רפאל</div><div class="role">סיפור הצלחה אמיתי</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT YOU'LL LEARN -->
+  <section class="block white">
+    <div class="container">
+      <h2 class="section-title">מה תלמדו בקורס?</h2>
+      <div class="learn">
+        <div class="learn-item"><span class="ck"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span>איך לצאת ממעגל הדיאטות והנפילות</div>
+        <div class="learn-item"><span class="ck"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span>איך לאכול מסודר בלי להגיע לרעב קיצוני בערב</div>
+        <div class="learn-item"><span class="ck"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span>איך להפחית חשקים למתוק ולבצקים</div>
+        <div class="learn-item"><span class="ck"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span>איך לשלב חלבון, סיבים, מים ופחמימות מורכבות כדי להיות שבעים יותר</div>
+        <div class="learn-item"><span class="ck"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span>איך להתנהל בשישי-שבת, חגים ואירועים</div>
+        <div class="learn-item"><span class="ck"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span>איך לחזור למסלול אחרי בולמוס או נפילה, בלי צום ובלי קיזוז</div>
+        <div class="learn-item"><span class="ck"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span>איך להפסיק את החשיבה של "הכל או כלום"</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT'S INSIDE -->
+  <section class="block cream">
+    <div class="container">
+      <h2 class="section-title">מה מחכה לכם בפנים?</h2>
+      <div class="inside">
+        <div class="inside-item"><span class="ic">📚</span>6 פרקים קצרים וברורים</div>
+        <div class="inside-item"><span class="ic">🎬</span>שיעורים לצפייה בקצב שלכם</div>
+        <div class="inside-item"><span class="ic">📝</span>משימות אישיות שיעזרו לכם להבין מה מפיל אתכם באכילה</div>
+        <div class="inside-item"><span class="ic">🧰</span>כלים להתמודדות עם חשקים, סטרס, עייפות ואכילה רגשית</div>
+        <div class="inside-item"><span class="ic">🍽️</span>רעיונות לארוחות משביעות שמחזירות שליטה</div>
+        <div class="inside-item bonus"><span class="ic">🎁</span>בונוס: פרוטוקול 24 שעות אחרי נפילה</div>
+        <div class="inside-item bonus"><span class="ic">🎁</span>בונוס: סופי שבוע וחגים בלי לעלות במשקל</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="block white">
+    <div class="container">
+      <div class="about-card">
+        <div class="about-img"><img src="images/meital-full.jpg" alt="מיטל שרים - נטורופתית, מאמנת תזונה" /></div>
+        <div class="about-text">
+          <h3>נעים מאוד, אני מיטל שרים</h3>
+          <p>נטורופתית, מאמנת לתזונה ומדריכת כושר כבר 15 שנה. אני לא מאמינה בדיאטות קיצוניות, ברעב או בספירת קלוריות. אני מלמדת איך לאכול בצורה שמאזנת את הגוף, מפעילה את חילוף החומרים, מפחיתה חשקים ועוזרת לרדת בשומן בצורה שפויה ובריאה יותר. כי רק כשנהנים מתמידים.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="final">
+    <div class="container narrow">
+      <h2>הגיע הזמן להפסיק להתחיל מחדש</h2>
+      <p>אתם לא צריכים עוד דיאטה. אתם צריכים שיטה שתעבוד גם כשיש חיים אמיתיים.</p>
+      <div class="lines">גם כשיש שבת.<br>גם כשיש חג.<br>גם כשיש אירוע.<br>גם כשיש חשק למתוק.<br>וגם כשנופלים.</div>
+      <a href="https://wa.me/972543192961?text=הי%20מיטל%2C%20אני%20רוצה%20להצטרף%20לקורס%20שליטה%20באכילה%20בלי%20מלחמות" class="cta-btn green" target="_blank" rel="noopener">כן, אני רוצה להצטרף לקורס</a>
+    </div>
+  </section>
+
+  <!-- SIGNOFF -->
+  <div class="signoff">
+    <p class="it">באהבה רבה,</p>
+    <p class="nm">מיטל שרים</p>
+    <p class="role">נטורופתית, מאמנת תזונה ומדריכת כושר</p>
+  </div>
+
+  <footer class="footer">
+    <p class="tag">תזונה • תנועה • בריאות</p>
+    <p>© 2026 מטבולייף - מיטל שרים. כל הזכויות שמורות.</p>
+  </footer>
+
+</body>
+</html>
