@@ -145,9 +145,10 @@
     .progress{height:9px;background:#FDE68A;border-radius:999px;overflow:hidden;margin-top:9px;}
     .progress .bar{height:100%;background:linear-gradient(90deg,var(--green),var(--green-dark));border-radius:999px;width:79%;}
 
-    .form-card{background:#fff;border-radius:22px;padding:24px 20px;max-width:460px;margin:24px auto 0;box-shadow:0 18px 44px rgba(30,58,138,.16);text-align:right;border:1px solid rgba(30,58,138,.08);}
-    .form-card h3{color:var(--blue);font-size:21px;font-weight:900;text-align:center;margin-bottom:4px;}
-    .form-card p{color:rgba(30,58,138,.72);font-size:14px;text-align:center;margin-bottom:14px;}
+    .form-card{background:#fff;border-radius:24px;padding:36px 30px;max-width:580px;margin:30px auto 0;box-shadow:0 26px 64px rgba(16,185,129,.32);text-align:right;border:3px solid var(--green);scroll-margin-top:78px;}
+    .form-card h3{color:var(--blue);font-size:27px;font-weight:900;text-align:center;margin-bottom:8px;line-height:1.25;}
+    .form-card p{color:rgba(30,58,138,.8);font-size:16px;text-align:center;margin-bottom:20px;line-height:1.6;}
+    @media(max-width:640px){.form-card{padding:26px 18px;}.form-card h3{font-size:23px;}}
 
     /* FAQ */
     .faq{max-width:700px;margin:0 auto;display:grid;gap:10px;}
@@ -201,6 +202,15 @@
       <p class="lead">תקשיבו להם בעצמכם. אנשים אמיתיים, בגילאים שלכם, שעברו בדיוק את מה שאתם עוברים:</p>
       <div class="vids single">
         <div class="vcard"><video src="videos/comp-main.mp4" poster="images/posters/comp-main.jpg" controls preload="none" playsinline></video><div class="vcap"><div class="nm">5 סיפורי הצלחה</div><div class="role">עדינה, שרה, רפאל, בר ואורית מספרים בעצמם</div></div></div>
+      </div>
+      <p class="ba-title">תמונות לפני ואחרי של מטופלים</p>
+      <div class="bagrid">
+        <div class="bacard"><img src="images/ba-swimsuit.jpg" alt="לפני ואחרי" loading="lazy"></div>
+        <div class="bacard"><img src="images/ba-etad-pants.jpg" alt="לפני ואחרי" loading="lazy"></div>
+        <div class="bacard"><img src="images/ba-genriran.jpg" alt="לפני ואחרי" loading="lazy"></div>
+        <div class="bacard"><img src="images/ba-ezra.jpg" alt="לפני ואחרי" loading="lazy"></div>
+        <div class="bacard"><img src="images/ba-rami.jpg" alt="לפני ואחרי" loading="lazy"></div>
+        <div class="bacard"><img src="images/ba-orit-new.jpg" alt="אורית לפני ואחרי" loading="lazy"></div>
       </div>
       <div class="ctaband"><a href="#register" class="cta-btn green">מיטל, אני רוצה להיכנס לתוכנית</a></div>
     </div>
@@ -346,15 +356,12 @@
       </div>
       <p class="ba-title">תמונות לפני ואחרי של מטופלים</p>
       <div class="bagrid">
-        <div class="bacard"><img src="images/ba-orit-galber-90.jpg" alt="אורית גלבר רזתה 90 קג" loading="lazy"></div>
-        <div class="bacard"><img src="images/ba-shimon.jpg" alt="שמעון לביא רזה 26 קג" loading="lazy"></div>
-        <div class="bacard"><img src="images/ba-aliza.jpg" alt="עליזה כהן רזתה 20 קג" loading="lazy"></div>
         <div class="bacard"><img src="images/ba-debi.jpg" alt="דבי בר טורא לפני ואחרי" loading="lazy"></div>
         <div class="bacard"><img src="images/ba-or.jpg" alt="אור צנעני לפני ואחרי" loading="lazy"></div>
         <div class="bacard"><img src="images/ba-shira.jpg" alt="שירה לפני ואחרי" loading="lazy"></div>
         <div class="bacard"><img src="images/ba-yaniv.jpg" alt="יניב צייזלר לפני ואחרי" loading="lazy"></div>
-        <div class="bacard"><img src="images/ba-liran.jpg" alt="לירן בן פורת לפני ואחרי" loading="lazy"></div>
         <div class="bacard"><img src="images/ba-orit-new.jpg" alt="אורית לפני ואחרי" loading="lazy"></div>
+        <div class="bacard"><img src="images/ba-liran.jpg" alt="לירן בן פורת לפני ואחרי" loading="lazy"></div>
       </div>
     </div>
   </section>
@@ -405,7 +412,7 @@
   </section>
 
   <!-- PRICE + FORM -->
-  <section class="block cream" id="register">
+  <section class="block cream">
     <div class="container">
       <h2 class="stitle">מה העלות שלכם <span class="grn">היום?</span></h2>
       <div class="pricebox">
@@ -423,11 +430,11 @@
           <div class="tt"><div class="num" id="t-m">00</div><div class="lbl">דקות</div></div>
           <div class="tt"><div class="num" id="t-s">00</div><div class="lbl">שניות</div></div>
         </div>
-        <div class="form-card">
-          <h3>מהרו להשיג את ההטבה שלכם</h3>
-          <p>השאירו פרטים ונתחיל את הדרך יחד</p>
-          <script type='text/javascript' src='https://form2.ravpage.co.il/b98984a670d3458c4240fddd9532a3d76A1ECFD1' charset='UTF-8'></script>
-        </div>
+      </div>
+      <div class="form-card" id="register">
+        <h3>כאן ממלאים פרטים ומצטרפים לתוכנית</h3>
+        <p>השאירו שם, טלפון ומייל. מיד לאחר מכן עוברים לתשלום מאובטח בקארדקום</p>
+        <script type='text/javascript' src='https://form2.ravpage.co.il/b98984a670d3458c4240fddd9532a3d76A1ECFD1' charset='UTF-8'></script>
       </div>
     </div>
   </section>
@@ -458,15 +465,13 @@
       </div>
       <p class="ba-title">עוד תמונות לפני ואחרי של מטופלים</p>
       <div class="bagrid">
+        <div class="bacard"><img src="images/ba-shimon.jpg" alt="שמעון לביא רזה 26 קג" loading="lazy"></div>
         <div class="bacard"><img src="images/ba-sarit.jpg" alt="שרית דרור ירדה 17 קג" loading="lazy"></div>
+        <div class="bacard"><img src="images/ba-aliza.jpg" alt="עליזה כהן רזתה 20 קג" loading="lazy"></div>
         <div class="bacard"><img src="images/ba-navit.jpg" alt="נוית בר לפני ואחרי" loading="lazy"></div>
         <div class="bacard"><img src="images/ba-young-man.jpg" alt="ירד 5 קג ו-10% שומן" loading="lazy"></div>
         <div class="bacard"><img src="images/ba-etad-shalom.jpg" alt="אטד שלום לפני ואחרי" loading="lazy"></div>
-        <div class="bacard"><img src="images/ba-etad-pants.jpg" alt="לפני ואחרי" loading="lazy"></div>
-        <div class="bacard"><img src="images/ba-swimsuit.jpg" alt="לפני ואחרי" loading="lazy"></div>
-        <div class="bacard"><img src="images/ba-genriran.jpg" alt="לפני ואחרי" loading="lazy"></div>
-        <div class="bacard"><img src="images/ba-ezra.jpg" alt="לפני ואחרי" loading="lazy"></div>
-        <div class="bacard"><img src="images/ba-rami.jpg" alt="לפני ואחרי" loading="lazy"></div>
+        <div class="bacard"><img src="images/ba-orit-galber-90.jpg" alt="אורית גלבר רזתה 90 קג" loading="lazy"></div>
       </div>
       <div class="ctaband"><a href="#register" class="cta-btn green">אני בוחר/ת בעצמי, אני מצטרף/ת</a></div>
     </div>
