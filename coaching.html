@@ -103,6 +103,14 @@
     .vcap .nm{font-size:15.5px;font-weight:900;color:var(--blue);} .vcap .role{font-size:12.5px;color:var(--green-dark);font-weight:700;margin-top:2px;}
     .recobox{max-width:520px;margin:18px auto 0;background:#ECFDF5;border:1px solid var(--green);border-radius:14px;padding:14px 18px;text-align:center;font-size:15.5px;font-weight:700;color:var(--green-dark);}
     .recobox a{color:var(--green-dark);font-weight:900;text-decoration:underline;}
+    .recos{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;max-width:680px;margin:14px auto 0;}
+    @media(min-width:680px){.recos{grid-template-columns:repeat(4,1fr);}}
+    .reco{background:#fff;border:2px solid var(--green);border-radius:16px;padding:16px 12px;text-align:center;display:flex;flex-direction:column;gap:3px;box-shadow:0 8px 22px -10px rgba(16,185,129,.35);transition:transform .15s;}
+    .reco:hover{transform:translateY(-3px);}
+    .reco b{font-size:16px;font-weight:900;color:var(--blue);}
+    .reco span{font-size:13px;font-weight:800;color:var(--green-dark);}
+    .reco em{font-style:normal;font-size:15px;font-weight:800;color:var(--purple);margin-top:6px;display:flex;align-items:center;justify-content:center;gap:5px;direction:ltr;}
+    .reco em::before{content:"📞";}
     .ba-title{font-size:16px;font-weight:800;color:var(--purple);text-align:center;margin:30px 0 16px;}
     .bagrid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;max-width:860px;margin:0 auto;}
     @media(min-width:680px){.bagrid{grid-template-columns:repeat(3,1fr);}}
@@ -189,7 +197,13 @@
       <div class="vids">
         <div class="vcard"><video src="videos/comp-main.mp4" poster="images/posters/comp-main.jpg" controls preload="none" playsinline></video><div class="vcap"><div class="nm">5 סיפורי הצלחה</div><div class="role">עדינה, שרה, רפאל, בר ואורית מספרים בעצמם</div></div></div>
       </div>
-      <div class="recobox">בר מייזל חדד רזתה 17 ק"ג 💚 לשיחה והמלצה אישית: <a href="tel:0545924390" dir="ltr">054-592-4390</a></div>
+      <p class="ba-title">רוצים לשמוע מהם בעצמכם? התקשרו להמלצה אישית</p>
+      <div class="recos">
+        <a class="reco" href="tel:0545924390"><b>בר מייזל חדד</b><span>ירדה 17 ק"ג</span><em>054-592-4390</em></a>
+        <a class="reco" href="tel:0546786507"><b>נסים טרבלסי</b><span>ירד 15 ק"ג</span><em>054-678-6507</em></a>
+        <a class="reco" href="tel:0526465627"><b>אורית גלבר</b><span>ירדה 90 ק"ג</span><em>052-646-5627</em></a>
+        <a class="reco" href="tel:0546258427"><b>דובי בר טורא</b><span>ירד 25 ק"ג</span><em>054-625-8427</em></a>
+      </div>
       <p class="ba-title">תמונות לפני ואחרי של מטופלים</p>
       <div class="bagrid">
         <div class="bacard"><img src="images/ba-orit-galber-90.jpg" alt="אורית גלבר רזתה 90 קג" loading="lazy"></div>
