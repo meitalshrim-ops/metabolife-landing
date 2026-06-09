@@ -111,6 +111,11 @@
     .reco span{font-size:13px;font-weight:800;color:var(--green-dark);}
     .reco em{font-style:normal;font-size:15px;font-weight:800;color:var(--purple);margin-top:6px;display:flex;align-items:center;justify-content:center;gap:5px;direction:ltr;}
     .reco em::before{content:"📞";}
+    .ytgrid{display:grid;grid-template-columns:1fr;gap:16px;max-width:840px;margin:0 auto;}
+    @media(min-width:680px){.ytgrid{grid-template-columns:repeat(2,1fr);}}
+    .ytcard{background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 12px 32px -10px rgba(30,58,138,.18);}
+    .ytwrap{position:relative;width:100%;padding-top:56.25%;background:#000;}
+    .ytwrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0;}
     .ba-title{font-size:16px;font-weight:800;color:var(--purple);text-align:center;margin:30px 0 16px;}
     .bagrid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;max-width:860px;margin:0 auto;}
     @media(min-width:680px){.bagrid{grid-template-columns:repeat(3,1fr);}}
@@ -196,6 +201,16 @@
       <p class="lead">אם זה עבד עבורם ועבורי, זה יכול לעבוד גם עבורכם. הקשיבו להם בעצמכם:</p>
       <div class="vids">
         <div class="vcard"><video src="videos/comp-main.mp4" poster="images/posters/comp-main.jpg" controls preload="none" playsinline></video><div class="vcap"><div class="nm">5 סיפורי הצלחה</div><div class="role">עדינה, שרה, רפאל, בר ואורית מספרים בעצמם</div></div></div>
+      </div>
+      <p class="ba-title">עוד סרטוני המלצה של מטופלים</p>
+      <div class="ytgrid">
+        <div class="ytcard"><div class="ytwrap"><iframe src="https://www.youtube-nocookie.com/embed/AOsltJJz7jo" title="אורית גלבר" loading="lazy" allow="encrypted-media;picture-in-picture" allowfullscreen></iframe></div><div class="vcap"><div class="nm">אורית גלבר</div><div class="role">ירדה 90 ק"ג</div></div></div>
+        <div class="ytcard"><div class="ytwrap"><iframe src="https://www.youtube-nocookie.com/embed/mvLjBn9Jn6Y" title="בר מייזל חדד" loading="lazy" allow="encrypted-media;picture-in-picture" allowfullscreen></iframe></div><div class="vcap"><div class="nm">בר מייזל חדד</div><div class="role">ירדה 17 ק"ג</div></div></div>
+        <div class="ytcard"><div class="ytwrap"><iframe src="https://www.youtube-nocookie.com/embed/db151VfMWZU" title="מאיה בן דב" loading="lazy" allow="encrypted-media;picture-in-picture" allowfullscreen></iframe></div><div class="vcap"><div class="nm">מאיה בן דב</div><div class="role">ירדה 48 ק"ג</div></div></div>
+        <div class="ytcard"><div class="ytwrap"><iframe src="https://www.youtube-nocookie.com/embed/ClF4SytjyOQ" title="נסים טרבלסי" loading="lazy" allow="encrypted-media;picture-in-picture" allowfullscreen></iframe></div><div class="vcap"><div class="nm">נסים טרבלסי</div><div class="role">ירד 15 ק"ג</div></div></div>
+        <div class="ytcard"><div class="ytwrap"><iframe src="https://www.youtube-nocookie.com/embed/Kh8ewBF0FfM" title="דנה צימליכמן" loading="lazy" allow="encrypted-media;picture-in-picture" allowfullscreen></iframe></div><div class="vcap"><div class="nm">דנה צימליכמן</div><div class="role">ירדה 15 ק"ג</div></div></div>
+        <div class="ytcard"><div class="ytwrap"><iframe src="https://www.youtube-nocookie.com/embed/gAlQzS2_Lno" title="עידית מהרשק" loading="lazy" allow="encrypted-media;picture-in-picture" allowfullscreen></iframe></div><div class="vcap"><div class="nm">עידית מהרשק</div><div class="role">ירדה 15 ק"ג</div></div></div>
+        <div class="ytcard"><div class="ytwrap"><iframe src="https://www.youtube-nocookie.com/embed/PwLKPcFIM-Y" title="עמיחי נויזץ" loading="lazy" allow="encrypted-media;picture-in-picture" allowfullscreen></iframe></div><div class="vcap"><div class="nm">עמיחי נויזץ</div><div class="role">ירד 15 ק"ג</div></div></div>
       </div>
       <p class="ba-title">רוצים לשמוע מהם בעצמכם? התקשרו להמלצה אישית</p>
       <div class="recos">
