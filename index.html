@@ -148,10 +148,11 @@
     .progress{height:9px;background:#FDE68A;border-radius:999px;overflow:hidden;margin-top:9px;}
     .progress .bar{height:100%;background:linear-gradient(90deg,var(--green),var(--green-dark));border-radius:999px;width:79%;}
 
-    .form-card{background:#fff;border-radius:24px;padding:36px 30px;max-width:580px;margin:30px auto 0;box-shadow:0 26px 64px rgba(16,185,129,.32);text-align:right;border:3px solid var(--green);scroll-margin-top:78px;}
-    .form-card h3{color:var(--blue);font-size:27px;font-weight:900;text-align:center;margin-bottom:8px;line-height:1.25;}
-    .form-card p{color:rgba(30,58,138,.8);font-size:16px;text-align:center;margin-bottom:20px;line-height:1.6;}
-    @media(max-width:640px){.form-card{padding:26px 18px;}.form-card h3{font-size:23px;}}
+    .form-card{background:#fff;border-radius:28px;padding:14px 36px 40px;max-width:660px;margin:34px auto 0;box-shadow:0 32px 76px rgba(16,185,129,.4);text-align:right;border:4px solid var(--green);scroll-margin-top:80px;overflow:hidden;}
+    .form-card .ribbon{background:linear-gradient(135deg,var(--green),var(--green-dark));color:#fff;margin:-14px -36px 22px;padding:14px 20px;text-align:center;font-weight:900;font-size:18px;letter-spacing:.3px;}
+    .form-card h3{color:var(--blue);font-size:clamp(26px,4.4vw,33px);font-weight:900;text-align:center;margin-bottom:10px;line-height:1.22;}
+    .form-card p{color:rgba(30,58,138,.82);font-size:17.5px;text-align:center;margin-bottom:24px;line-height:1.6;}
+    @media(max-width:640px){.form-card{padding:10px 18px 30px;}.form-card .ribbon{margin:-10px -18px 18px;font-size:16px;}.form-card h3{font-size:24px;}}
 
     /* FAQ */
     .faq{max-width:700px;margin:0 auto;display:grid;gap:10px;}
@@ -426,19 +427,19 @@
     <div class="container">
       <h2 class="stitle">למי זה <span class="grn">מתאים?</span></h2>
       <div class="learn">
-        <div class="li"><span class="ck"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span>למי שרוצה לרדת במשקל, ולשמור על התוצאה לאורך זמן. לא עוד ירידה זמנית ואז עלייה חזרה, אלא תהליך שאפשר לחיות איתו.</div>
-        <div class="li"><span class="ck"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span>למי שניסה כבר הרבה דיאטות ועלה בחזרה, ורוצה סוף סוף לצאת מהלופ של "מתחילים, נשברים, עולים שוב".</div>
-        <div class="li"><span class="ck"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span>למי שקשה להתמיד לאורך זמן, כי כל תפריט מרגיש כמו עונש, וכל חריגה קטנה גורמת לוותר על הכול.</div>
-        <div class="li"><span class="ck"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span>למי שרוצה לרדת במשקל בלי רעב ובלי איסורים, בלי להרגיש שכל החיים מסתובבים סביב מה מותר ומה אסור.</div>
-        <div class="li"><span class="ck"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span>למי שיש חשקים למתוקים, בצקים ונשנושים, ורוצה ללמוד איך לאזן את הגוף בלי להרגיש שהוא נלחם בעצמו כל יום.</div>
-        <div class="li"><span class="ck"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span>למי שרוצה ללמוד להתנהל נכון בשבתות, חגים ואירועים, בלי לצום לפני, בלי לאבד שליטה בערב, ובלי להתחיל מחדש בכל יום ראשון.</div>
+        <div class="li"><span class="ck"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span>למי שרוצה לרדת במשקל, ולשמור על התוצאה לאורך זמן.<br>לא עוד ירידה זמנית ואז עלייה חזרה, אלא תהליך שאפשר לחיות איתו.</span></div>
+        <div class="li"><span class="ck"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span>למי שניסה כבר הרבה דיאטות ועלה בחזרה,<br>ורוצה סוף סוף לצאת מהלופ של "מתחילים, נשברים, עולים שוב".</span></div>
+        <div class="li"><span class="ck"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span>למי שקשה להתמיד לאורך זמן,<br>כי כל תפריט מרגיש כמו עונש, וכל חריגה קטנה גורמת לוותר על הכול.</span></div>
+        <div class="li"><span class="ck"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span>למי שרוצה לרדת במשקל בלי רעב ובלי איסורים,<br>בלי להרגיש שכל החיים מסתובבים סביב מה מותר ומה אסור.</span></div>
+        <div class="li"><span class="ck"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span>למי שיש חשקים למתוקים, בצקים ונשנושים,<br>ורוצה ללמוד איך לאזן את הגוף בלי להרגיש שהוא נלחם בעצמו כל יום.</span></div>
+        <div class="li"><span class="ck"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span>למי שרוצה ללמוד להתנהל נכון בשבתות, חגים ואירועים,<br>בלי לצום לפני, בלי לאבד שליטה בערב, ובלי להתחיל מחדש בכל יום ראשון.</span></div>
       </div>
       <div class="notfit">
         <h4>למי זה לא מתאים?</h4>
-        <div class="nli"><b>✕</b> לאנשים שמחפשים פתרונות קסם, בלי הבנה, בלי תהליך ובלי שינוי אמיתי.</div>
-        <div class="nli"><b>✕</b> למי שמחפש דיאטות כאסח, תפריטים קיצוניים, רעב, איסורים והבטחות מהירות שלא מחזיקות.</div>
-        <div class="nli"><b>✕</b> למי שרוצה לרדת מהר בלי לשנות הרגלים, כי המטרה כאן היא לא רק לרדת, אלא לדעת לשמור על זה.</div>
-        <div class="nli"><b>✕</b> למי שמחפש שיגידו לו בדיוק מה אסור ומה מותר. השיטה כאן מלמדת חופש, איזון ובחירה נכונה, לא חיים בתוך רשימת איסורים.</div>
+        <div class="nli"><b>✕</b> <span>לאנשים שמחפשים פתרונות קסם,<br>בלי הבנה, בלי תהליך ובלי שינוי אמיתי.</span></div>
+        <div class="nli"><b>✕</b> <span>למי שמחפש דיאטות כאסח,<br>תפריטים קיצוניים, רעב, איסורים והבטחות מהירות שלא מחזיקות.</span></div>
+        <div class="nli"><b>✕</b> <span>למי שרוצה לרדת מהר בלי לשנות הרגלים,<br>כי המטרה כאן היא לא רק לרדת, אלא לדעת לשמור על זה.</span></div>
+        <div class="nli"><b>✕</b> <span>למי שמחפש שיגידו לו בדיוק מה אסור ומה מותר.<br>השיטה כאן מלמדת חופש, איזון ובחירה נכונה, לא חיים בתוך רשימת איסורים.</span></div>
       </div>
     </div>
   </section>
@@ -490,6 +491,7 @@
         </div>
       </div>
       <div class="form-card" id="register">
+        <div class="ribbon">⬇ כאן נרשמים לקורס ⬇</div>
         <h3>כאן ממלאים פרטים ומצטרפים לתוכנית</h3>
         <p>השאירו שם, טלפון ומייל. מיד לאחר מכן עוברים לתשלום מאובטח בקארדקום</p>
         <script type='text/javascript' src='https://form2.ravpage.co.il/b98984a670d3458c4240fddd9532a3d76A1ECFD1' charset='UTF-8'></script>
