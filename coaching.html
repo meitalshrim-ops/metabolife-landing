@@ -75,16 +75,16 @@
 
     /* numbered mistakes */
     .nums{max-width:760px;margin:0 auto;display:grid;gap:16px;}
-    .numcard{background:#fff;border-radius:18px;padding:22px 24px 22px 24px;box-shadow:0 10px 30px -12px rgba(30,58,138,.16);border-right:5px solid var(--purple);position:relative;text-align:right;}
+    .numcard{background:#fff;border-radius:18px;padding:22px 24px 22px 24px;box-shadow:0 10px 30px -12px rgba(30,58,138,.16);border-top:5px solid var(--purple);position:relative;text-align:center;}
     section.cream .numcard{background:#fff;}
-    .numcard .nh{display:flex;align-items:center;gap:12px;margin-bottom:8px;}
+    .numcard .nh{display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:8px;}
     .numcard .nn{flex-shrink:0;width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,var(--blue),var(--purple));color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:20px;}
     .numcard h4{font-size:19px;font-weight:900;color:var(--blue);line-height:1.3;}
     .numcard p{font-size:15.5px;color:rgba(30,58,138,.82);line-height:1.75;}
 
     /* check list */
     .learn{max-width:740px;margin:0 auto;display:grid;gap:11px;}
-    .li{display:flex;gap:12px;align-items:flex-start;font-size:16px;color:var(--blue);font-weight:600;background:#fff;border-radius:12px;padding:14px 17px;box-shadow:0 4px 14px rgba(30,58,138,.05);line-height:1.6;text-align:right;}
+    .li{display:flex;gap:12px;align-items:center;justify-content:center;font-size:16px;color:var(--blue);font-weight:600;background:#fff;border-radius:12px;padding:14px 17px;box-shadow:0 4px 14px rgba(30,58,138,.05);line-height:1.6;text-align:center;}
     section.cream .li{background:#fff;}
     .li .ck{flex-shrink:0;width:24px;height:24px;background:var(--green);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-top:1px;}
     .li .ck svg{width:13px;height:13px;color:#fff;}
@@ -100,8 +100,8 @@
     @media(min-width:780px){.about{grid-template-columns:340px 1fr;gap:34px;}}
     .about-img{border-radius:18px;overflow:hidden;max-width:340px;margin:0 auto;box-shadow:0 14px 34px -12px rgba(30,58,138,.3);}
     .about-img img{width:100%;height:auto;display:block;}
-    .about h3{font-size:24px;font-weight:900;color:var(--blue);margin-bottom:6px;}
-    .about p{font-size:15.5px;color:rgba(30,58,138,.86);line-height:1.8;margin-bottom:10px;text-align:right;}
+    .about h3{font-size:24px;font-weight:900;color:var(--blue);margin-bottom:6px;text-align:center;}
+    .about p{font-size:15.5px;color:rgba(30,58,138,.86);line-height:1.8;margin-bottom:10px;text-align:center;}
 
     /* testimonials */
     .vids{display:grid;grid-template-columns:1fr;gap:16px;max-width:360px;margin:0 auto;}
@@ -250,10 +250,12 @@
       <div class="about">
         <div class="about-img"><img src="images/meital-big.jpg" alt="מיטל שרים"></div>
         <div>
-          <h3>מיטל שרים</h3>
-          <p style="font-weight:700;color:var(--purple);">נטורופתית, מאמנת לתזונה ומדריכת כושר</p>
-          <p>כבר 15 שנה בעולם הדיאטות, עוזרת לאנשים לרזות ולשמור על המשקל. אשמח להראות לכם את הדרך הנכונה לרדת במשקל, להפסיק לעבור מדיאטה לדיאטה, והפעם לרדת ולשמור על המשקל לתמיד.</p>
-          <p>תכנית ההרזיה שלי כוללת ליווי אישי, תמיכה, שיחות מוטיבציה, תכנית אימונים, ותפריטים משתנים ומגוונים בהתאמה אישית למה שאתם אוהבים לאכול, לבדיקות הדם ולקצב חילוף החומרים שלכם.</p>
+          <h3>נעים מאוד, אני מיטל שרים</h3>
+          <p style="font-weight:700;color:var(--purple);">נטורופתית, מאמנת לתזונה ומדריכת אירובי, כבר 15 שנה</p>
+          <p><strong>אני לא עושה דיאטות ולא סופרת קלוריות.</strong> אני בונה תזונה הורמונלית שמאזנת ומעלה את האסטרוגן והפרוגסטרון אצל נשים, ואת הטסטוסטרון אצל גברים, ומאזנת את הקורטיזול, האינסולין ובלוטת התריס.</p>
+          <p>כי כשההורמונים לא מאוזנים יש חשקים למתוק ובצק, חילוף החומרים נחלש ואוגר שומן, ויש תיאבון יתר ומצבי רוח שמקשים להתמיד. כשאני מאזנת אותם, החשק למתוק יורד, הגוף שורף שומן במקום לאגור, ופשוט מרגישים שבעים.</p>
+          <p>אני לא בונה תפריטי סבל ולא נותנת אוכל שלא אוהבים. רק כשנהנים מתמידים, אז אני רוצה שתהנו, בלי מסגרת כובלת עם איסורים.</p>
+          <p>אני גם עובדת איתכם על הראש: איזון אכילה רגשית (מסטרס, משעמום, עייפות), וניהול חריגות, לחרוג, ליהנות ולחזור למסלול בלי להתייאש. ובונה תכנית אימונים לפי הכושר, הגיל ומה שאוהבים.</p>
           <p style="font-weight:800;color:var(--blue);">אז תפרגנו לעצמכם, ותשאירו את הפרטים שלכם.</p>
         </div>
       </div>
@@ -263,16 +265,13 @@
   <!-- 7 MISTAKES -->
   <section class="block cream">
     <div class="container">
-      <h2 class="stitle">7 הטעויות שמכשילות <span class="pop">כל דיאטה</span></h2>
-      <p class="lead">במהלך השנים שמתי לב ל-7 טעויות מרכזיות שחוזרות על עצמן אצל מי שעושה דיאטה לבד. מי שעושה בליווי דיאטנית, סיכויי ההצלחה שלו עולים.</p>
+      <h2 class="stitle">4 הטעויות שמכשילות <span class="pop">כל דיאטה</span></h2>
+      <p class="lead">לאורך השנים ראיתי שוב ושוב את אותן טעויות שמפילות כל דיאטה. הנה הן, ומה אני עושה אחרת:</p>
       <div class="nums">
-        <div class="numcard"><div class="nh"><span class="nn">1</span><h4>מרעיבים את עצמכם</h4></div><p>אוכלים כמה שפחות כדי לרדת מהר. הגוף מתרגל לכמות מועטה, אוגר את האוכל והופך אותו לשומן במקום אנרגיה. בצום מאגרי הגליקוגן נגמרים, הגוף מייצר סוכר מחומצות אמינו של השרירים והעצמות, מפרק מסת שריר, וככל שמסת השריר קטנה יותר, חילוף החומרים איטי יותר.</p></div>
-        <div class="numcard"><div class="nh"><span class="nn">2</span><h4>לא תמיד אוכלים מסודר</h4></div><p>כשאין סדר בארוחות מגיעים לרעב קיצוני ורוצים לנשנש מכל הבא ליד. נפגע מנגנון הרעב והשובע, הגוף לא מאותת מה הוא צריך, וזה גורם לעייפות, חולשה ואכילת מתוקים ששוברת את הדיאטה.</p></div>
-        <div class="numcard"><div class="nh"><span class="nn">3</span><h4>אוכלים וסובלים</h4></div><p>נמנעים ממזונות רבים שאתם אוהבים. ברגע שתטעמו מהם, תישברו ותעלו הכל בחזרה. בשיטה שלי אוכלים גם אוכל שאוהבים.</p></div>
-        <div class="numcard"><div class="nh"><span class="nn">4</span><h4>אין מגוון באוכל</h4></div><p>האוכל משעמם, נוצרים חוסרים תזונתיים, אתם עייפים, בלי מצב רוח, כל פיתוי נעשה אטרקטיבי ובסוף שוברים את הדיאטה.</p></div>
-        <div class="numcard"><div class="nh"><span class="nn">5</span><h4>לא עושים שינוי אמיתי בהרגלים ובחשיבה</h4></div><p>הולכים על תהליך קיצוני של "כאן ועכשיו מרזים מהר", וכשמגיעים החגים, נופש, אירוע או תקופת סטרס, פשוט נשברים ועולים את כל הקילוגרמים חזרה.</p></div>
-        <div class="numcard"><div class="nh"><span class="nn">6</span><h4>הגדרת יעדים ומטרות לא נכונה</h4></div><p>יעדים וזמנים לא נכונים מביאים לאכזבה ולפגיעה במוטיבציה, וכך מפסיקים להיצמד לתפריט שהותאם אישית.</p></div>
-        <div class="numcard"><div class="nh"><span class="nn">7</span><h4>לכל אחד מתאימים מזונות אחרים</h4></div><p>רובנו חושבים שאנחנו אוכלים בריא, אבל כשנכנסים לעובי הקורה מבינים שהאוכל ה"בריא" לא תמיד מתאים למצב הבריאותי שלנו היום או לחילוף החומרים שהשתבש לאורך זמן מסטרס, דיאטות לא נכונות או מזון לא מתאים.</p></div>
+        <div class="numcard"><div class="nh"><span class="nn">1</span><h4>הגדרת מטרות שגויה</h4></div><p>כשהמטרה היחידה היא "לרדת במשקל", מנסים לקצר את הדרך: מורידים מאכלים, סובלים ומרעיבים. וברגע שנתקעים במשקל או חורגים פעם אחת, מתייאשים, כועסים על עצמכם ועוזבים, ולאט לאט עולים הכל בחזרה. <strong>ירידה במשקל היא התוצאה, לא המטרה.</strong> המטרה היא פעולות יומיומיות שמובילות אליה (לשתות יותר מים, לזרז את חילוף החומרים, למצוא תחליפים בריאים).</p></div>
+        <div class="numcard"><div class="nh"><span class="nn">2</span><h4>לאכול ולסבול</h4></div><p>סובלים כי כל הזמן אומרים לנו מה אסור: אסור לחם, אסור מתוק, אסור מאפים. וברגע שנכנסים למסגרת כובלת עם איסורים, רוצים רק לשבור אותה, ואז נשברים ועולים הכל בחזרה. אצלי משלבים בתפריט מאכלים שאתם אוהבים, אפילו המבורגר, פיצה ועוגות, בסוג הקמח ובמינון המתאימים לחילוף החומרים שלכם. <strong>רק כשנהנים מתמידים.</strong></p></div>
+        <div class="numcard"><div class="nh"><span class="nn">3</span><h4>לאכול את עצמך מבפנים</h4></div><p>אכילה רגשית: רצים למקרר ברגעי מצוקה כדי להתנחם, ואחר כך מגיעים ייסורי מצפון, נשברים ושמים קץ לדיאטה. בתכנית אני מלמדת לאזן את זה בשתי דרכים: יצירת מודעות (יומן אכילה, כי הגוף זוכר גם מה ששכחתם), ושאילת שאלות (האם הרעב פיזי או רגשי?). אוכל לא פותר בעיות, ואפשר למצוא תחליפים.</p></div>
+        <div class="numcard"><div class="nh"><span class="nn">4</span><h4>לספור קלוריות</h4></div><p>מכסת קלוריות יומית מכניסה אתכם למסגרת כובלת עם איסורים שנשברים ממנה. וחוץ מזה, היא לא לוקחת בחשבון שכל גוף מגיב אחרת לאותם מאכלים, לפי חילוף החומרים, בדיקות הדם והמצב הבריאותי. במקום לספור, אני מעניקה לגוף בדיוק מה שהוא צריך לפי הצרכים האישיים שלו.</p></div>
       </div>
       <div class="ctaband"><a href="#register" class="cta-btn green">אני רוצה לעשות את זה נכון</a></div>
     </div>
