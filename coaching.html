@@ -107,6 +107,8 @@
     .vids{display:grid;grid-template-columns:1fr;gap:16px;max-width:360px;margin:0 auto;}
     .vids.two{max-width:740px;grid-template-columns:1fr;}
     @media(min-width:680px){.vids.two{grid-template-columns:repeat(2,1fr);}}
+    .vids.three{max-width:760px;grid-template-columns:repeat(2,1fr);}
+    @media(min-width:680px){.vids.three{grid-template-columns:repeat(3,1fr);}}
     .vcard{background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 12px 32px -10px rgba(30,58,138,.18);}
     .vcard video{width:100%;aspect-ratio:9/16;object-fit:cover;background:#000;display:block;}
     .vcap{padding:11px 13px;text-align:center;}
@@ -406,9 +408,10 @@
     <div class="container">
       <h2 class="stitle">ועוד הוכחות שזה <span class="grn">עובד</span></h2>
       <p class="ba-title">סרטוני המלצה (אפשר להתקשר אליהם)</p>
-      <div class="ytgrid">
-        <div class="ytcard"><div class="ytwrap"><iframe src="https://www.youtube-nocookie.com/embed/gAlQzS2_Lno" title="עידית מהרשק" loading="lazy" allow="encrypted-media;picture-in-picture" allowfullscreen></iframe></div><div class="vcap"><div class="nm">עידית מהרשק</div><div class="role">ירדה 15 ק"ג</div></div></div>
-        <div class="ytcard"><div class="ytwrap"><iframe src="https://www.youtube-nocookie.com/embed/PwLKPcFIM-Y" title="עמיחי נויזץ" loading="lazy" allow="encrypted-media;picture-in-picture" allowfullscreen></iframe></div><div class="vcap"><div class="nm">עמיחי נויזץ</div><div class="role">ירד 15 ק"ג</div></div></div>
+      <div class="vids three">
+        <div class="vcard"><video src="videos/idit.mp4" poster="images/posters/idit.jpg" controls preload="metadata" playsinline webkit-playsinline></video><div class="vcap"><div class="nm">עידית מהרשק</div><div class="role">ירדה 15 ק"ג</div></div></div>
+        <div class="vcard"><video src="videos/amichai.mp4" poster="images/posters/amichai.jpg" controls preload="metadata" playsinline webkit-playsinline></video><div class="vcap"><div class="nm">עמיחי נויזץ</div><div class="role">ירד 15 ק"ג</div></div></div>
+        <div class="vcard"><video src="videos/roi.mp4" poster="images/posters/roi.jpg" controls preload="metadata" playsinline webkit-playsinline></video><div class="vcap"><div class="nm">רועי</div><div class="role">סיפור הצלחה אמיתי</div></div></div>
       </div>
       <p class="ba-title">עוד תמונות לפני ואחרי של מטופלים</p>
       <div class="bagrid">
