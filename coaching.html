@@ -162,6 +162,8 @@
     .form-card label{display:block;font-weight:700;font-size:14.5px;color:var(--blue);margin:0 2px 5px;}
     .form-card input{width:100%;padding:13px 15px;border:2px solid #E5E7EB;border-radius:12px;font-family:inherit;font-size:16px;margin-bottom:14px;background:#FAFAFB;}
     .form-card input:focus{outline:none;border-color:var(--green);background:#fff;}
+    .form-card select{width:100%;padding:13px 15px;border:2px solid #E5E7EB;border-radius:12px;font-family:inherit;font-size:16px;margin-bottom:14px;background:#FAFAFB;color:var(--blue);}
+    .form-card select:focus{outline:none;border-color:var(--green);background:#fff;}
     .form-card button{width:100%;padding:16px;background:linear-gradient(135deg,var(--green),var(--green-dark));color:#fff;border:none;border-radius:14px;font-family:inherit;font-weight:900;font-size:18px;cursor:pointer;box-shadow:0 12px 28px -8px rgba(16,185,129,.5);transition:transform .15s;}
     .form-card button:hover{transform:translateY(-2px);}
     .form-card .tiny{font-size:12.5px;color:rgba(30,58,138,.55);text-align:center;margin:12px 0 0;}
@@ -449,8 +451,8 @@
       <h2 class="stitle">מוכנים לעשות את זה נכון <span class="grn">אחת ולתמיד?</span></h2>
       <p class="lead">אם נמאס לכם להישבר מדיאטה כל פעם מחדש, לרדת ולעלות בחזרה, ואתם רוצים לעשות את זה נכון, השאירו פרטים ואחזור אליכם בהקדם לייעוץ תזונתי מקיף.</p>
       <div class="form-card">
-        <h3>השאירו פרטים ואחזור אליכם</h3>
-        <p>נתחיל יחד את הדרך לחילוף חומרים מהיר ולמשקל שנשאר</p>
+        <h3>השאירו פרטים לשיחת היכרות</h3>
+        <p>אחזור אליכם אישית. זו תכנית ליווי אישית בהתאמה מלאה, לא דיאטת קסם.</p>
         <form onsubmit="return mbLead(event)">
           <label for="nm">שם מלא</label>
           <input id="nm" name="nm" type="text" required placeholder="השם שלכם">
@@ -458,6 +460,15 @@
           <input id="ph" name="ph" type="tel" required placeholder="050-0000000">
           <label for="em">דוא"ל</label>
           <input id="em" name="em" type="email" placeholder="name@email.com">
+          <label for="ch">מה הכי מפריע לכם היום?</label>
+          <select id="ch" name="ch" required>
+            <option value="">בחרו מהרשימה...</option>
+            <option>ניסיתי הרבה דיאטות ועליתי בחזרה</option>
+            <option>חילוף חומרים איטי ונתקעתי במשקל</option>
+            <option>אכילה רגשית וחשקים למתוק</option>
+            <option>בעיות בריאות (סוכר, לחץ דם, מפרקים)</option>
+            <option>משהו אחר</option>
+          </select>
           <button type="submit">שלחו לי פרטים ואחזור אליכם 💚</button>
           <p class="tiny">בלחיצה תיפתח שיחת וואטסאפ אליי עם הפרטים שלכם</p>
         </form>
@@ -498,7 +509,8 @@
     var msg='היי מיטל, אשמח לייעוץ תזונתי וליווי אישי.%0A'+
             'שם: '+encodeURIComponent(f.nm.value)+'%0A'+
             'טלפון: '+encodeURIComponent(f.ph.value)+'%0A'+
-            'מייל: '+encodeURIComponent(f.em.value||'-');
+            'מייל: '+encodeURIComponent(f.em.value||'-')+'%0A'+
+            'מה הכי מפריע: '+encodeURIComponent(f.ch.value||'-');
     window.open('https://wa.me/972543192961?text='+msg,'_blank');
     return false;
   }
