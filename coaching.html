@@ -111,6 +111,7 @@
     .vcard video{width:100%;aspect-ratio:9/16;object-fit:cover;background:#000;display:block;}
     .vcap{padding:11px 13px;text-align:center;}
     .vcap .nm{font-size:15.5px;font-weight:900;color:var(--blue);} .vcap .role{font-size:12.5px;color:var(--green-dark);font-weight:700;margin-top:2px;}
+    .vcap .ph{display:inline-block;margin-top:6px;padding:5px 14px;background:#ECFDF5;border:1px solid var(--green);border-radius:999px;font-weight:800;font-size:13.5px;color:var(--green-dark);}
     .recobox{max-width:520px;margin:18px auto 0;background:#ECFDF5;border:1px solid var(--green);border-radius:14px;padding:14px 18px;text-align:center;font-size:15.5px;font-weight:700;color:var(--green-dark);}
     .recobox a{color:var(--green-dark);font-weight:900;text-decoration:underline;}
     .recos{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;max-width:680px;margin:14px auto 0;}
@@ -221,12 +222,11 @@
       <div class="vids single">
         <div class="vcard"><video src="videos/comp-main.mp4" poster="images/posters/comp-main.jpg" controls preload="metadata" playsinline webkit-playsinline></video><div class="vcap"><div class="nm">5 סיפורי הצלחה</div><div class="role">עדינה, שרה, רפאל, בר ואורית מספרים בעצמם</div></div></div>
       </div>
-      <p class="ba-title">רוצים לשמוע מהם בעצמכם? התקשרו להמלצה אישית</p>
-      <div class="recos">
-        <a class="reco" href="tel:0545924390"><b>בר מייזל חדד</b><span>ירדה 17 ק"ג</span><em>054-592-4390</em></a>
-        <a class="reco" href="tel:0546786507"><b>נסים טרבלסי</b><span>ירד 15 ק"ג</span><em>054-678-6507</em></a>
-        <a class="reco" href="tel:0526465627"><b>אורית גלבר</b><span>ירדה 90 ק"ג</span><em>052-646-5627</em></a>
-        <a class="reco" href="tel:0546258427"><b>דובי בר טורא</b><span>ירד 25 ק"ג</span><em>054-625-8427</em></a>
+      <p class="ba-title">סרטוני המלצה (אפשר להתקשר אליהם)</p>
+      <div class="ytgrid">
+        <div class="ytcard"><div class="ytwrap"><iframe src="https://www.youtube-nocookie.com/embed/AOsltJJz7jo" title="אורית גלבר" loading="lazy" allow="encrypted-media;picture-in-picture" allowfullscreen></iframe></div><div class="vcap"><div class="nm">אורית גלבר</div><div class="role">ירדה 90 ק"ג</div><a class="ph" href="tel:0526465627" dir="ltr">📞 052-646-5627</a></div></div>
+        <div class="ytcard"><div class="ytwrap"><iframe src="https://www.youtube-nocookie.com/embed/mvLjBn9Jn6Y" title="בר מייזל חדד" loading="lazy" allow="encrypted-media;picture-in-picture" allowfullscreen></iframe></div><div class="vcap"><div class="nm">בר מייזל חדד</div><div class="role">ירדה 17 ק"ג</div><a class="ph" href="tel:0545924390" dir="ltr">📞 054-592-4390</a></div></div>
+        <div class="ytcard"><div class="ytwrap"><iframe src="https://www.youtube-nocookie.com/embed/ClF4SytjyOQ" title="נסים טרבלסי" loading="lazy" allow="encrypted-media;picture-in-picture" allowfullscreen></iframe></div><div class="vcap"><div class="nm">נסים טרבלסי</div><div class="role">ירד 15 ק"ג</div><a class="ph" href="tel:0546786507" dir="ltr">📞 054-678-6507</a></div></div>
       </div>
       <p class="ba-title">תמונות לפני ואחרי של מטופלים</p>
       <div class="bagrid">
@@ -234,6 +234,7 @@
         <div class="bacard"><img src="images/ba-etad-shalom.jpg" alt="אטד שלום ירדה 20 קג" loading="lazy"></div>
         <div class="bacard"><img src="images/ba-ezra-mizrahi.jpg" alt="לפני ואחרי" loading="lazy"></div>
         <div class="bacard"><img src="images/ba-rami.jpg" alt="לפני ואחרי" loading="lazy"></div>
+        <div class="bacard"><img src="images/ba-shira.jpg" alt="מרי דיב לפני ואחרי" loading="lazy"></div>
         <div class="bacard"><img src="images/ba-orit-galber-90.jpg" alt="אורית גלבר ירדה 90 קג" loading="lazy"><div class="bacap">אורית גלבר ירדה 90 ק"ג</div></div>
       </div>
       <div class="ctaband"><a href="#register" class="cta-btn green">אני רוצה תוצאות כאלה</a></div>
@@ -280,7 +281,12 @@
     <div class="container">
       <h2 class="stitle">עוד סיפורי הצלחה <span class="grn">אמיתיים</span></h2>
       <div class="vids single">
-        <div class="vcard"><video src="videos/comp-1.mp4" poster="images/posters/comp-1.jpg" controls preload="metadata" playsinline webkit-playsinline></video><div class="vcap"><div class="nm">מאיה בן דב ועוד מטופלים</div><div class="role">סיפורי הצלחה מחוברים</div></div></div>
+        <div class="vcard"><video src="videos/comp-1.mp4" poster="images/posters/comp-1.jpg" controls preload="metadata" playsinline webkit-playsinline></video><div class="vcap"><div class="nm">3 סיפורי הצלחה</div><div class="role">מטופלים מספרים בעצמם</div></div></div>
+      </div>
+      <p class="ba-title">סרטוני המלצה (אפשר להתקשר אליהם)</p>
+      <div class="ytgrid">
+        <div class="ytcard"><div class="ytwrap"><iframe src="https://www.youtube-nocookie.com/embed/db151VfMWZU" title="מאיה בן דב" loading="lazy" allow="encrypted-media;picture-in-picture" allowfullscreen></iframe></div><div class="vcap"><div class="nm">מאיה בן דב</div><div class="role">ירדה 48 ק"ג</div></div></div>
+        <div class="ytcard"><div class="ytwrap"><iframe src="https://www.youtube-nocookie.com/embed/Kh8ewBF0FfM" title="דנה צימליכמן" loading="lazy" allow="encrypted-media;picture-in-picture" allowfullscreen></iframe></div><div class="vcap"><div class="nm">דנה צימליכמן</div><div class="role">ירדה 15 ק"ג</div></div></div>
       </div>
       <p class="ba-title">תמונות לפני ואחרי של מטופלים</p>
       <div class="bagrid">
@@ -403,16 +409,19 @@
     <div class="container">
       <h2 class="stitle">ועוד הוכחות שזה <span class="grn">עובד</span></h2>
       <div class="vids single">
-        <div class="vcard"><video src="videos/comp-2.mp4" poster="images/posters/comp-2.jpg" controls preload="metadata" playsinline webkit-playsinline></video><div class="vcap"><div class="nm">דנה צימליכמן ועוד מטופלים</div><div class="role">סיפורי הצלחה מחוברים</div></div></div>
+        <div class="vcard"><video src="videos/comp-2.mp4" poster="images/posters/comp-2.jpg" controls preload="metadata" playsinline webkit-playsinline></video><div class="vcap"><div class="nm">4 סיפורי הצלחה</div><div class="role">מטופלים מספרים בעצמם</div></div></div>
+      </div>
+      <p class="ba-title">סרטוני המלצה (אפשר להתקשר אליהם)</p>
+      <div class="ytgrid">
+        <div class="ytcard"><div class="ytwrap"><iframe src="https://www.youtube-nocookie.com/embed/gAlQzS2_Lno" title="עידית מהרשק" loading="lazy" allow="encrypted-media;picture-in-picture" allowfullscreen></iframe></div><div class="vcap"><div class="nm">עידית מהרשק</div><div class="role">ירדה 15 ק"ג</div></div></div>
+        <div class="ytcard"><div class="ytwrap"><iframe src="https://www.youtube-nocookie.com/embed/PwLKPcFIM-Y" title="עמיחי נויזץ" loading="lazy" allow="encrypted-media;picture-in-picture" allowfullscreen></iframe></div><div class="vcap"><div class="nm">עמיחי נויזץ</div><div class="role">ירד 15 ק"ג</div></div></div>
       </div>
       <p class="ba-title">עוד תמונות לפני ואחרי של מטופלים</p>
       <div class="bagrid">
         <div class="bacard"><img src="images/ba-or.jpg" alt="אור צנעני לפני ואחרי" loading="lazy"></div>
-        <div class="bacard"><img src="images/ba-shira.jpg" alt="שירה לפני ואחרי" loading="lazy"></div>
         <div class="bacard"><img src="images/ba-young-man.jpg" alt="ירד 5 קג ו-10% שומן" loading="lazy"></div>
         <div class="bacard"><img src="images/ba-amichai.jpg" alt="עמיחי נויזץ ירד 15 קג" loading="lazy"></div>
         <div class="bacard"><img src="images/ba-liana.jpg" alt="ליאנה פוזיילוב רזתה 24 קג" loading="lazy"></div>
-        <div class="bacard"><img src="images/ba-mari.jpg" alt="מרי דיב לפני ואחרי" loading="lazy"></div>
         <div class="bacard"><img src="images/ba-ruhi.jpg" alt="רוחי בכר לפני ואחרי" loading="lazy"></div>
         <div class="bacard"><img src="images/ba-orit-new.jpg" alt="אורית לפני ואחרי" loading="lazy"></div>
         <div class="bacard"><img src="images/ba-ezra.jpg" alt="עזרא לפני ואחרי" loading="lazy"></div>
