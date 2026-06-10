@@ -105,6 +105,8 @@
 
     /* testimonials */
     .vids{display:grid;grid-template-columns:1fr;gap:16px;max-width:360px;margin:0 auto;}
+    .vids.two{max-width:740px;grid-template-columns:1fr;}
+    @media(min-width:680px){.vids.two{grid-template-columns:repeat(2,1fr);}}
     .vcard{background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 12px 32px -10px rgba(30,58,138,.18);}
     .vcard video{width:100%;aspect-ratio:9/16;object-fit:cover;background:#000;display:block;}
     .vcap{padding:11px 13px;text-align:center;}
@@ -215,8 +217,9 @@
     <div class="container">
       <h2 class="stitle">לקוחות מספרים <span class="grn">וממליצים</span></h2>
       <p class="lead">אם זה עבד עבורם ועבורי, זה יכול לעבוד גם עבורכם. הקשיבו להם בעצמכם:</p>
-      <div class="vids">
+      <div class="vids two">
         <div class="vcard"><video src="videos/comp-main.mp4" poster="images/posters/comp-main.jpg" controls preload="metadata" playsinline webkit-playsinline></video><div class="vcap"><div class="nm">5 סיפורי הצלחה</div><div class="role">עדינה, שרה, רפאל, בר ואורית מספרים בעצמם</div></div></div>
+        <div class="vcard"><video src="videos/comp-1.mp4" poster="images/posters/comp-1.jpg" controls preload="metadata" playsinline webkit-playsinline></video><div class="vcap"><div class="nm">עוד 3 סיפורי הצלחה</div><div class="role">מטופלים מספרים בעצמם</div></div></div>
       </div>
       <p class="ba-title">עוד סרטוני המלצה של מטופלים</p>
       <div class="ytgrid">
