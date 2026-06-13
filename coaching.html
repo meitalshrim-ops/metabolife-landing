@@ -117,6 +117,18 @@
     .bacard img{width:100%;height:auto;display:block;}
     .bacard .bacap{padding:8px 10px;text-align:center;font-size:13.5px;font-weight:800;color:var(--blue);background:#fff;}
 
+    /* self test */
+    .quiz{max-width:720px;margin:0 auto;background:#fff;border-radius:24px;padding:30px 26px;box-shadow:0 22px 56px -18px rgba(124,58,237,.3);border-top:6px solid var(--purple);}
+    .qintro{text-align:center;font-size:16.5px;font-weight:700;color:var(--blue);max-width:640px;margin:0 auto 18px;line-height:1.6;}
+    .qitem{display:flex;align-items:center;gap:13px;padding:12px 8px;border-bottom:1px solid #F1F1F4;cursor:pointer;font-size:16px;font-weight:600;color:var(--blue);text-align:right;}
+    .qitem:last-of-type{border-bottom:none;}
+    .qitem input{appearance:none;-webkit-appearance:none;flex-shrink:0;width:26px;height:26px;border:2px solid #C7CBD4;border-radius:8px;cursor:pointer;position:relative;transition:.15s;}
+    .qitem input:checked{background:var(--green);border-color:var(--green);}
+    .qitem input:checked::after{content:"✓";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:900;font-size:15px;}
+    .qresult{margin-top:22px;text-align:center;background:linear-gradient(135deg,#F4EFFF,#EAF6FF);border:1px solid #C7D2FE;border-radius:16px;padding:20px 22px;}
+    .qresult .cnt{font-size:36px;font-weight:900;color:var(--purple);line-height:1;}
+    .qresult .msg{font-size:16px;font-weight:700;color:var(--blue);margin-top:8px;line-height:1.6;}
+
     /* guarantee */
     .guarantee{max-width:720px;margin:0 auto;background:linear-gradient(135deg,#ECFDF5,#F0FDF4);border:2px solid var(--green);border-radius:22px;padding:30px 28px;text-align:center;}
     .guarantee .badge{display:inline-flex;align-items:center;justify-content:center;width:80px;height:80px;border-radius:50%;background:var(--green);color:#fff;font-weight:900;font-size:14px;line-height:1.1;margin-bottom:14px;text-align:center;}
@@ -213,7 +225,6 @@
         <p>בתהליך אנחנו בונים לכם תוכנית שמתאימה לגוף שלכם, לשגרה שלכם, לאוכל שאתם אוהבים ולמטרה שלכם.</p>
         <p class="em">המטרה היא לא רק לרדת במשקל - אלא לדעת איך לשמור על זה לאורך זמן.</p>
       </div>
-      <div class="infoimg"><img src="images/info-metabolism.jpg" alt="חילוף חומרים טוב, מה הוא עושה בגוף" loading="lazy"></div>
     </div>
   </section>
 
@@ -280,6 +291,32 @@
       </div>
       <p class="ba-quote" style="margin-top:26px;">כשהתוכנית מותאמת לגוף ולחיים שלכם - הרבה יותר קל להתמיד, לרדת ולשמור על התוצאה.</p>
       <div class="ctaband"><a href="#register" class="cta-btn green">גם אני רוצה להתחיל שינוי</a></div>
+    </div>
+  </section>
+
+  <!-- SELF CHECK -->
+  <section class="block cream">
+    <div class="container">
+      <h2 class="stitle">בדקו את עצמכם: האם חילוף החומרים שלכם <span class="pop">נחלש?</span></h2>
+      <p class="qintro">אם עניתם "כן" על 3 שאלות ומעלה - יכול להיות שהגוף שלכם כבר לא שורף כמו פעם:</p>
+      <div class="quiz">
+        <label class="qitem"><input type="checkbox" class="q"> אוכלים מעט ולא יורדים</label>
+        <label class="qitem"><input type="checkbox" class="q"> יש נפיחות בבטן או גזים</label>
+        <label class="qitem"><input type="checkbox" class="q"> עייפות אחרי אוכל</label>
+        <label class="qitem"><input type="checkbox" class="q"> חשקים חזקים למתוק או בצקים</label>
+        <label class="qitem"><input type="checkbox" class="q"> עצירות או בעיות עיכול</label>
+        <label class="qitem"><input type="checkbox" class="q"> השמנה באזור הבטן</label>
+        <label class="qitem"><input type="checkbox" class="q"> סטרס גבוה</label>
+        <label class="qitem"><input type="checkbox" class="q"> שינה לא טובה</label>
+        <label class="qitem"><input type="checkbox" class="q"> ירדתם בעבר ועליתם הכל בחזרה</label>
+        <div class="qresult">
+          <div class="cnt"><span id="qcount">0</span> / 9</div>
+          <div class="msg" id="qmsg">סמנו את מה שמתאים לכם וגלו את התוצאה</div>
+        </div>
+      </div>
+      <p class="lead" style="margin-top:26px;">אם סימנתם כמה סעיפים - זה בדיוק מה שאנחנו בודקים ומטפלים בו בליווי האישי.</p>
+      <div class="infoimg"><img src="images/info-metabolism.jpg" alt="חילוף חומרים טוב, מה הוא עושה בגוף" loading="lazy"></div>
+      <div class="ctaband"><a href="#register" class="cta-btn green">אני רוצה לבדוק התאמה</a></div>
     </div>
   </section>
 
@@ -429,6 +466,19 @@
   <footer class="footer"><p class="tag">תזונה • תנועה • בריאות</p><p>© 2026 מטבולייף - מיטל שרים. כל הזכויות שמורות.</p></footer>
 
   <script>
+  // Self-check counter
+  (function(){
+    var boxes=document.querySelectorAll('.quiz .q'),cnt=document.getElementById('qcount'),msg=document.getElementById('qmsg');
+    if(!boxes.length)return;
+    function upd(){
+      var c=0;boxes.forEach(function(b){if(b.checked)c++;});
+      cnt.textContent=c;
+      if(c===0){msg.textContent='סמנו את מה שמתאים לכם וגלו את התוצאה';}
+      else if(c>=3){msg.innerHTML='בסבירות גבוהה חילוף החומרים שלכם נחלש והגוף כבר לא שורף כמו פעם.<br>זה בדיוק מה שאני יודעת לתקן. בואו נבדוק התאמה 💚';}
+      else{msg.textContent='כדאי לשים לב. אשמח לעזור לכם לאזן את הגוף ולחזק את חילוף החומרים.';}
+    }
+    boxes.forEach(function(b){b.addEventListener('change',upd);});
+  })();
   // Lead form -> WhatsApp
   function mbLead(e){
     e.preventDefault();
