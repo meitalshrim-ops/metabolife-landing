@@ -438,18 +438,8 @@
           <input id="nm" name="nm" type="text" required placeholder="השם שלכם">
           <label for="ph">טלפון</label>
           <input id="ph" name="ph" type="tel" required placeholder="050-0000000">
-          <label for="kg">כמה ק"ג תרצו לרדת?</label>
-          <input id="kg" name="kg" type="text" placeholder="לדוגמה: 15">
-          <label for="ch">מה הכי מאתגר אתכם היום?</label>
-          <select id="ch" name="ch" required>
-            <option value="">בחרו מהרשימה...</option>
-            <option>ניסיתי הרבה דיאטות ועליתי בחזרה</option>
-            <option>חילוף חומרים איטי ונתקעתי במשקל</option>
-            <option>אכילה רגשית וחשקים למתוק</option>
-            <option>לא יודע/ת מה לאכול באירועים ובחגים</option>
-            <option>בעיות בריאות (סוכר, לחץ דם, מפרקים)</option>
-            <option>משהו אחר</option>
-          </select>
+          <label for="em">דוא"ל</label>
+          <input id="em" name="em" type="email" placeholder="name@email.com">
           <button type="submit">אני רוצה שיחת התאמה אישית 💚</button>
           <p class="tiny">בלחיצה תיפתח שיחת וואטסאפ אליי עם הפרטים שלכם</p>
         </form>
@@ -502,8 +492,7 @@
     var msg='היי מיטל, אשמח לשיחת התאמה אישית לליווי.%0A'+
             'שם: '+encodeURIComponent(f.nm.value)+'%0A'+
             'טלפון: '+encodeURIComponent(f.ph.value)+'%0A'+
-            'כמה ק"ג לרדת: '+encodeURIComponent(f.kg.value||'-')+'%0A'+
-            'הכי מאתגר: '+encodeURIComponent(f.ch.value||'-');
+            'מייל: '+encodeURIComponent(f.em.value||'-');
     window.open('https://wa.me/972543192961?text='+msg,'_blank');
     return false;
   }
