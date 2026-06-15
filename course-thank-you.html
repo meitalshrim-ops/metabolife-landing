@@ -168,6 +168,21 @@
     .contact-btn.whatsapp { background: #25D366; color: white; }
     .contact-btn svg { width: 20px; height: 20px; }
 
+    /* PERSONAL MESSAGE */
+    .personal { background: linear-gradient(to bottom, white 0%, var(--brand-cream-warm) 100%); padding: 56px 0; }
+    .personal-card { background: white; border-radius: 32px; padding: 44px 32px; max-width: 720px; margin: 0 auto; box-shadow: 0 20px 60px -10px rgba(30,58,138,0.15); border-right: 4px solid var(--brand-green); }
+    .personal-grid { display: grid; grid-template-columns: 1fr; gap: 32px; align-items: center; }
+    @media (min-width: 768px) { .personal-grid { grid-template-columns: 240px 1fr; gap: 36px; } }
+    .personal-image { aspect-ratio: 9/16; background: var(--brand-cream); border-radius: 20px; overflow: hidden; max-width: 240px; margin: 0 auto; }
+    .personal-image img { width: 100%; height: 100%; object-fit: contain; }
+    .personal-text .greeting { font-size: 16px; color: var(--brand-green); font-weight: 700; letter-spacing: 0.5px; margin-bottom: 8px; }
+    .personal-text h2 { font-size: 26px; font-weight: 800; color: var(--brand-blue); margin-bottom: 16px; line-height: 1.3; }
+    .personal-text p { font-size: 16px; color: rgba(30,58,138,0.85); line-height: 1.7; margin-bottom: 14px; }
+    .personal-text .signature { margin-top: 22px; padding-top: 22px; border-top: 1px dashed rgba(30,58,138,0.15); }
+    .signature-italic { font-size: 16px; color: rgba(30,58,138,0.75); font-style: italic; margin-bottom: 4px; }
+    .signature-name { font-size: 20px; font-weight: 800; color: var(--brand-blue); }
+    .signature-role { font-size: 14px; color: rgba(30,58,138,0.6); margin-top: 4px; }
+
     .footer { background: var(--brand-blue-dark); color: rgba(255,255,255,0.55); padding: 24px 20px; text-align: center; font-size: 13px; border-top: 1px solid rgba(255,255,255,0.1); }
     .footer-tagline { font-size: 15px; color: rgba(255,255,255,0.85); font-weight: 600; margin-bottom: 8px; }
 
@@ -282,16 +297,27 @@
     </div>
   </section>
 
-  <!-- PERSONAL PHOTO -->
-  <section class="sec cream">
+  <!-- PERSONAL MESSAGE -->
+  <section class="personal">
     <div class="container">
-      <div style="max-width:300px;margin:0 auto;border-radius:24px;overflow:hidden;box-shadow:0 20px 50px -15px rgba(30,58,138,.3);">
-        <img src="images/meital-thanks.jpg" alt="מיטל שרים - נטורופתית ומאמנת תזונה" style="width:100%;display:block;">
-      </div>
-      <div style="text-align:center;margin-top:22px;">
-        <p style="font-style:italic;color:rgba(30,58,138,.72);font-size:15.5px;">באהבה רבה,</p>
-        <p style="font-size:23px;font-weight:900;color:var(--brand-blue);margin-top:4px;">מיטל שרים</p>
-        <p style="font-size:14px;color:rgba(30,58,138,.6);margin-top:3px;">נטורופתית, מאמנת תזונה ומדריכת כושר | מטבולייף</p>
+      <div class="personal-card">
+        <div class="personal-grid">
+          <div class="personal-image">
+            <img src="images/meital-thanks.jpg" alt="מיטל שרים - נטורופתית, מאמנת תזונה" />
+          </div>
+          <div class="personal-text">
+            <p class="greeting">✦ הודעה אישית ממיטל ✦</p>
+            <h2>שמחה שאתם כאן 💚</h2>
+            <p>כל הכבוד שבחרתם להשקיע בעצמכם ולעשות שינוי אמיתי. זה לא עוד קורס "דיאטה", אלא קורס שמלמד למה אתם נשברים, למה אתם לא מתמידים, ואיך להחזיר את השליטה על האכילה.</p>
+            <p>במשך 15 שנה עזרתי ליותר מ-5,000 אנשים לרדת במשקל ולשנות הרגלים, בלי דיאטות סבל, בלי הרעבה, ובלי לאבד מסת שריר. כל מה שלמדתי נמצא עכשיו בתוך הקורס, מחכה לכם.</p>
+            <p>אתם לא צריכים להיות מושלמים כדי להצליח. אף אחד לא מושלם. אתם צריכים להיות עקביים וללמוד לחזור למסלול. אני כאן איתכם בכל צעד.</p>
+            <div class="signature">
+              <p class="signature-italic">באהבה רבה,</p>
+              <p class="signature-name">מיטל שרים</p>
+              <p class="signature-role">נטורופתית, מאמנת תזונה ומדריכת אירובי</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
