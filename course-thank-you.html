@@ -144,6 +144,20 @@
     .form-card .tiny { font-size: 12.5px; color: rgba(30,58,138,0.55); text-align: center; margin: 12px 0 0; }
     .limited { max-width: 520px; margin: 16px auto 0; background: #FFF7ED; border: 1px solid #FDBA74; border-radius: 14px; padding: 13px 18px; text-align: center; font-size: 14.5px; font-weight: 700; color: #9A3412; line-height: 1.6; }
 
+    /* ORDER BUMPS */
+    .bump-intro { text-align: center; max-width: 600px; margin: 0 auto 28px; }
+    .bump-intro .up { font-size: clamp(22px, 3vw, 29px); font-weight: 900; color: var(--brand-purple); margin-bottom: 10px; line-height: 1.25; }
+    .bump-intro p { font-size: 16.5px; color: rgba(30,58,138,0.85); line-height: 1.75; }
+    .bump-grid { display: grid; gap: 20px; max-width: 620px; margin: 0 auto; }
+    .bump-card { background: #fff; border: 2px solid #EDE9FE; border-radius: 20px; padding: 26px 24px; text-align: center; box-shadow: 0 12px 32px -12px rgba(124,58,237,0.22); }
+    .bump-card h3 { font-size: 22px; font-weight: 900; color: var(--brand-blue); margin-bottom: 10px; line-height: 1.3; }
+    .bump-card p { font-size: 15.5px; color: rgba(30,58,138,0.82); line-height: 1.7; margin-bottom: 16px; }
+    .bump-price { margin-bottom: 18px; }
+    .bump-price .old { font-size: 18px; color: #9CA3AF; text-decoration: line-through; font-weight: 700; margin-left: 10px; }
+    .bump-price .now { font-size: 32px; color: var(--brand-green-dark); font-weight: 900; }
+    .bump-btn { display: inline-block; width: 100%; padding: 15px 20px; background: linear-gradient(135deg, var(--brand-green), var(--brand-green-dark)); color: #fff; border-radius: 12px; font-weight: 900; font-size: 17px; box-shadow: 0 12px 28px -8px rgba(16,185,129,0.5); transition: transform 0.15s; }
+    .bump-btn:hover { transform: translateY(-2px); }
+
     /* CONTACT */
     .contact { background: var(--brand-blue-dark); color: white; padding: 56px 0 40px; text-align: center; }
     .contact h2 { font-size: clamp(22px, 2.5vw, 28px); font-weight: 800; margin-bottom: 12px; }
@@ -264,6 +278,30 @@
       </div>
       <div class="cta-wrap" style="margin-top:6px;"><a href="https://secure.cardcom.solutions/EA/EA5/YjpH6gCS4E2GLK135TTXXQ/PaymentSP" class="cta-btn">כן, אני רוצה פגישה אישית עם מיטל 💜</a></div>
       <p class="limited">מספר המקומות לפגישות האישיות מוגבל, כדי שאוכל לתת יחס אישי ומדויק לכל אחד ואחת.</p>
+    </div>
+  </section>
+
+  <!-- ORDER BUMPS -->
+  <section class="sec cream">
+    <div class="container">
+      <div class="bump-intro">
+        <div class="up">רוצה לשדרג את התהליך?</div>
+        <p>רוצים גם תוספת שתעזור לכם להתמיד?<br>אפשר להוסיף את ספר המתכונים המושחתים ואת התפריט שמשלב אותם ביום יום.</p>
+      </div>
+      <div class="bump-grid">
+        <div class="bump-card">
+          <h3>ספר המתכונים המושחתים</h3>
+          <p>מתכונים לעוגות, קינוחים, בצקים ומאפים מקמח כוסמין לבן במיוחד וללא סוכר.</p>
+          <div class="bump-price"><span class="old">149 ₪</span><span class="now">47 ₪</span></div>
+          <a href="#book-link" class="bump-btn">אני רוצה את ספר המתכונים</a>
+        </div>
+        <div class="bump-card">
+          <h3>תפריט עם המתכונים המושחתים</h3>
+          <p>תפריט מסודר שמראה איך לשלב את המתכונים ביום יום בלי לצאת מאיזון.</p>
+          <div class="bump-price"><span class="old">97 ₪</span><span class="now">27 ₪</span></div>
+          <a href="https://secure.cardcom.solutions/EA/EA5/4pAaJ4D3NESWFg6pqmg/PaymentSP" class="bump-btn">אני רוצה את התפריט</a>
+        </div>
+      </div>
     </div>
   </section>
 
