@@ -180,6 +180,23 @@
     .footer .tag{font-size:15px;color:rgba(255,255,255,.85);font-weight:600;margin-bottom:7px;}
 
     @media(max-width:640px){section.block{padding:42px 0;}.hero{padding:44px 16px 52px;}.container{padding:0 16px;}.cta-btn{width:100%;max-width:360px;}}
+
+    /* ===== טופס הרשמה מותאם ===== */
+    #mb-join-form{max-width:460px;margin:0 auto;text-align:right;}
+    #mb-join-form .field{margin-bottom:16px;}
+    #mb-join-form label{display:block;font-size:15.5px;font-weight:800;color:var(--blue);margin-bottom:7px;}
+    #mb-join-form input{width:100%;font-family:"Heebo",sans-serif;font-size:17px;font-weight:600;color:var(--blue);background:#fff;border:2px solid #E3DED5;border-radius:14px;padding:14px 16px;transition:border-color .15s,box-shadow .15s;outline:none;}
+    #mb-join-form input::placeholder{color:#B9B2A6;font-weight:500;}
+    #mb-join-form input:focus{border-color:var(--green);box-shadow:0 0 0 4px rgba(16,185,129,.15);}
+    #mb-join-form input.mb-invalid{border-color:#DC2626;box-shadow:0 0 0 4px rgba(220,38,38,.12);}
+    #mb-err{display:none;background:#FEF2F2;color:#B91C1C;border:1px solid #FCA5A5;border-radius:12px;padding:11px 14px;font-size:14.5px;font-weight:700;margin-bottom:14px;text-align:center;}
+    #mb-err.show{display:block;}
+    .mb-submit{width:100%;font-family:"Heebo",sans-serif;font-size:20px;font-weight:900;color:#fff;background:linear-gradient(135deg,var(--green),var(--green-dark));border:none;border-radius:999px;padding:18px 24px;cursor:pointer;box-shadow:0 16px 36px -8px rgba(16,185,129,.6);transition:transform .15s,box-shadow .15s,opacity .15s;margin-top:4px;}
+    .mb-submit:hover{transform:translateY(-2px);box-shadow:0 20px 44px -8px rgba(16,185,129,.7);}
+    .mb-submit:active{transform:translateY(0);}
+    .mb-submit[disabled]{opacity:.75;cursor:default;transform:none;}
+    .mb-secure{text-align:center;font-size:13.5px;color:rgba(30,58,138,.65);font-weight:600;margin-top:14px;line-height:1.5;}
+    .mb-rav-hidden{position:absolute!important;left:-9999px!important;top:auto!important;width:1px!important;height:1px!important;overflow:hidden!important;opacity:0!important;pointer-events:none!important;}
   </style>
 </head>
 <body>
@@ -497,8 +514,27 @@
       <div class="form-card" id="register">
         <div class="ribbon">⬇ כאן נרשמים לקורס ⬇</div>
         <h3>כאן ממלאים פרטים ומצטרפים לתוכנית</h3>
-        <p>השאירו שם, טלפון ומייל. מיד לאחר מכן עוברים לתשלום מאובטח בקארדקום</p>
-        <script type='text/javascript' src='https://form2.ravpage.co.il/b98984a670d3458c4240fddd9532a3d76A1ECFD1' charset='UTF-8'></script>
+        <p>השאירו שם ומייל. מיד לאחר מכן עוברים לתשלום מאובטח בקארדקום</p>
+
+        <form id="mb-join-form" novalidate>
+          <div class="field">
+            <label for="mb-name">שם מלא</label>
+            <input type="text" id="mb-name" name="name" autocomplete="name" placeholder="השם שלכם" required>
+          </div>
+          <div class="field">
+            <label for="mb-email">כתובת מייל</label>
+            <input type="email" id="mb-email" name="email" autocomplete="email" inputmode="email" dir="ltr" placeholder="name@example.com" required>
+          </div>
+          <div id="mb-err"></div>
+          <button type="submit" class="mb-submit" id="mb-submit">להצטרפות ולתשלום מאובטח ←</button>
+          <div class="mb-secure">🔒 התשלום מאובטח דרך קארדקום. אחרי מילוי הפרטים עוברים ישירות לדף התשלום.</div>
+        </form>
+
+        <!-- טופס רב דף (רב מסר) מוסתר. רושם את הליד לרב מסר ברקע בעת שליחת הטופס למעלה. -->
+        <div id="mb-ravpage-hidden" class="mb-rav-hidden" aria-hidden="true">
+          <script type='text/javascript' src='https://form2.ravpage.co.il/b98984a670d3458c4240fddd9532a3d76A1ECFD1' charset='UTF-8'></script>
+        </div>
+        <iframe name="mb-rav-sink" id="mb-rav-sink" class="mb-rav-hidden" tabindex="-1" aria-hidden="true" title="rav-sink"></iframe>
       </div>
     </div>
   </section>
@@ -592,6 +628,69 @@
       d.textContent=pad(dd);h.textContent=pad(hh);m.textContent=pad(mm);s.textContent=pad(ss);
     }
     tick();setInterval(tick,1000);
+  })();
+  </script>
+
+  <!-- חיבור הטופס: רישום לרב מסר (ברקע) + מעבר לתשלום בקארדקום -->
+  <script>
+  (function(){
+    var CARDCOM='https://secure.cardcom.solutions/EA/EA5/4pAaJ4D3NESWFg6pqmg/PaymentSP';
+    var form=document.getElementById('mb-join-form');
+    if(!form)return;
+    var nameI=document.getElementById('mb-name'),emailI=document.getElementById('mb-email');
+    var errBox=document.getElementById('mb-err'),btn=document.getElementById('mb-submit');
+    var sending=false;
+    function showErr(m){errBox.textContent=m;errBox.classList.add('show');}
+    function clearErr(){errBox.textContent='';errBox.classList.remove('show');}
+    function validEmail(v){return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);}
+
+    function findRavForm(){
+      var host=document.getElementById('mb-ravpage-hidden');
+      var f=host&&host.querySelector('form');
+      if(f)return f;
+      var all=document.querySelectorAll('form');
+      for(var i=0;i<all.length;i++){
+        if(all[i].id==='mb-join-form')continue;
+        if(all[i].querySelector('input[type=email],input[name*="mail" i],input[id*="mail" i]'))return all[i];
+      }
+      return null;
+    }
+    function fillRav(rf,name,email){
+      if(!rf)return false;var ok=false;
+      var e=rf.querySelector('input[type=email]')||rf.querySelector('input[name*="mail" i],input[id*="mail" i],input[placeholder*="מייל"]');
+      if(e){e.value=email;e.dispatchEvent(new Event('input',{bubbles:true}));e.dispatchEvent(new Event('change',{bubbles:true}));ok=true;}
+      var cands=rf.querySelectorAll('input[type=text],input:not([type])');
+      for(var i=0;i<cands.length;i++){
+        var c=cands[i],key=((c.name||'')+' '+(c.id||'')+' '+(c.placeholder||'')).toLowerCase();
+        if(key.indexOf('mail')>-1)continue;
+        if(key.indexOf('phone')>-1||key.indexOf('tel')>-1||key.indexOf('טלפו')>-1||key.indexOf('נייד')>-1)continue;
+        c.value=name;c.dispatchEvent(new Event('input',{bubbles:true}));c.dispatchEvent(new Event('change',{bubbles:true}));ok=true;break;
+      }
+      return ok;
+    }
+    function registerRav(name,email){
+      try{
+        var rf=findRavForm();
+        if(!rf)return;
+        fillRav(rf,name,email);
+        try{rf.setAttribute('target','mb-rav-sink');}catch(e){}
+        HTMLFormElement.prototype.submit.call(rf); // POST ישיר, התגובה נכנסת ל-iframe הנסתר
+      }catch(e){}
+    }
+
+    form.addEventListener('submit',function(ev){
+      ev.preventDefault();
+      if(sending)return;
+      clearErr();
+      var name=(nameI.value||'').trim(),email=(emailI.value||'').trim();
+      nameI.classList.remove('mb-invalid');emailI.classList.remove('mb-invalid');
+      if(name.length<2){nameI.classList.add('mb-invalid');showErr('נא למלא שם מלא');nameI.focus();return;}
+      if(!validEmail(email)){emailI.classList.add('mb-invalid');showErr('נא למלא כתובת מייל תקינה');emailI.focus();return;}
+      sending=true;btn.setAttribute('disabled','disabled');btn.textContent='מעבירים אותך לתשלום מאובטח...';
+      try{if(window.fbq)fbq('track','InitiateCheckout',{value:197,currency:'ILS',content_name:'קורס שליטה באכילה בלי מלחמות'});}catch(e){}
+      registerRav(name,email);
+      setTimeout(function(){window.location.href=CARDCOM;},900);
+    });
   })();
   </script>
 
