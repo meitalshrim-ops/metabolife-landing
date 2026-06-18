@@ -35,6 +35,11 @@ module.exports = async function handler(req, res) {
 
     const listId = parseInt(process.env.RAV_LIST_ID || '103192', 10);
 
+    // פיצול "שם מלא" לשם פרטי + משפחה (Responder משתמש ב-first/last/name, לא first_name)
+    const parts = name.split(/\s+/).filter(Boolean);
+    const first = parts.shift() || name;
+    const last = parts.join(' ');
+
     // 1) קבלת token
     const tr = await fetch(TOKEN_URL, {
       method: 'POST',
@@ -55,7 +60,7 @@ module.exports = async function handler(req, res) {
     const sr = await fetch(SUBS_URL, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + token },
-      body: JSON.stringify({ email: email, first_name: name, list_ids: [listId] })
+      body: JSON.stringify({ email: email, name: name, first: first, last: last, list_ids: [listId], override: true })
     });
     const sj = await sr.json().catch(() => ({}));
 
