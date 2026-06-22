@@ -674,5 +674,23 @@
   })();
   </script>
 
+  <!-- תיקון: כל כפתורי ה-CTA תמיד גוללים לטופס, גם אם כבר לחצו על כפתור אחר (הדפדפן לא גולל שוב לאותו #hash) -->
+  <script>
+  (function(){
+    var reg=document.getElementById('register');
+    if(!reg)return;
+    var links=document.querySelectorAll('a[href="#register"]');
+    for(var i=0;i<links.length;i++){
+      links[i].addEventListener('click',function(e){
+        e.preventDefault();
+        reg.scrollIntoView({behavior:'smooth',block:'start'});
+        try{history.replaceState(null,'','#register');}catch(_){}
+        var nm=document.getElementById('mb-name');
+        if(nm){setTimeout(function(){try{nm.focus({preventScroll:true});}catch(_){}} ,650);}
+      });
+    }
+  })();
+  </script>
+
 </body>
 </html>
