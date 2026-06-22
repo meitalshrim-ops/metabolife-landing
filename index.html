@@ -71,6 +71,10 @@
     .cta-btn:hover{transform:translateY(-2px);}
     .cta-btn.green{background:var(--green);color:#fff;}
     .cta-sub{font-size:13.5px;opacity:.9;margin-top:12px;}
+    @keyframes heroRise{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:translateY(0);}}
+    .hero h1{animation:heroRise .75s cubic-bezier(.2,.7,.2,1) both;}
+    .hero .reveal{animation:heroRise .75s cubic-bezier(.2,.7,.2,1) .12s both;}
+    .gold-grad{background:linear-gradient(92deg,#FDE68A 0%,#FBBF24 55%,#FDE68A 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;filter:drop-shadow(0 0 18px rgba(251,191,36,.5));}
 
     /* SECTIONS */
     section.block{padding:52px 0;}
@@ -217,7 +221,7 @@
   <section class="hero">
     <div class="container">
       <span class="eyebrow">הקורס הדיגיטלי של מטבולייף</span>
-      <h1 style="font-size:clamp(31px,6vw,56px);font-weight:900;line-height:1.08;letter-spacing:-.5px;margin-bottom:16px;text-shadow:0 4px 22px rgba(0,0,0,.2);">סוף סוף דרך אמיתית <span style="color:#FDE68A;white-space:nowrap;">לרדת במשקל</span></h1>
+      <h1 style="font-size:clamp(33px,6.4vw,60px);font-weight:900;line-height:1.05;letter-spacing:-.6px;margin-bottom:16px;text-shadow:0 4px 22px rgba(0,0,0,.22);">סוף סוף דרך אמיתית <span class="gold-grad" style="white-space:nowrap;">לרדת במשקל</span></h1>
       <p class="reveal" style="color:#fff;font-size:clamp(17px,2.6vw,24px);font-weight:700;line-height:1.45;max-width:660px;margin:0 auto 24px;opacity:.98;text-shadow:0 2px 12px rgba(0,0,0,.15);">בלי להרעיב את עצמכם, בלי להילחם באוכל,<br>ובלי לעלות הכול בחזרה ברגע שחוזרים לשגרה!</p>
       <p class="sub" style="margin-bottom:16px;">איך השיטה של מטבולייף, שמלמדת אתכם דווקא לאכול בצורה משביעה ונכונה יותר, עזרה כבר לאלפי אנשים בגיל 40+ להחזיר את הגוף למצב של שריפת שומן, לרדת במשקל ולשמור על התוצאה לאורך זמן?</p>
       <p class="sub" style="font-size:clamp(13.5px,1.8vw,15.5px);opacity:.9;">בלי לאבד מסת שריר, בלי לרדת רק בנוזלים, בלי תפריטים קיצוניים, בלי איסורים שגורמים לכם להישבר, ובלי להרגיש שכל החיים מסתובבים סביב דיאטה.</p>
