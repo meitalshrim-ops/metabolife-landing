@@ -674,19 +674,24 @@
   })();
   </script>
 
-  <!-- תיקון: כל כפתורי ה-CTA תמיד גוללים לטופס, גם אם כבר לחצו על כפתור אחר (הדפדפן לא גולל שוב לאותו #hash) -->
+  <!-- תיקון: כל כפתורי ה-CTA תמיד גוללים לטופס. מחשבים מיקום מחדש וגוללים שוב כי תמונות lazy שנטענות תוך כדי הגלילה מזיזות את הטופס -->
   <script>
   (function(){
     var reg=document.getElementById('register');
     if(!reg)return;
+    function go(){
+      var y=reg.getBoundingClientRect().top+(window.pageYOffset||document.documentElement.scrollTop)-80;
+      try{window.scrollTo({top:y,behavior:'smooth'});}catch(_){window.scrollTo(0,y);}
+    }
     var links=document.querySelectorAll('a[href="#register"]');
     for(var i=0;i<links.length;i++){
       links[i].addEventListener('click',function(e){
         e.preventDefault();
-        reg.scrollIntoView({behavior:'smooth',block:'start'});
         try{history.replaceState(null,'','#register');}catch(_){}
-        var nm=document.getElementById('mb-name');
-        if(nm){setTimeout(function(){try{nm.focus({preventScroll:true});}catch(_){}} ,650);}
+        go();
+        setTimeout(go,500);
+        setTimeout(go,1100);
+        setTimeout(go,1800);
       });
     }
   })();
