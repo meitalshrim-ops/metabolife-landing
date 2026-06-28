@@ -515,12 +515,15 @@
   <style id="oto-style">
     .oto{background:linear-gradient(160deg,#1E3A8A 0%,#3b2a8c 55%,#7C3AED 100%);padding:56px 20px;color:#fff;}
     .oto .wrap{max-width:680px;margin:0 auto;}
-    .oto .badge{display:inline-block;background:#FDE68A;color:#7c2d12;font-weight:800;font-size:14px;padding:8px 18px;border-radius:999px;margin-bottom:18px;letter-spacing:.3px;}
-    .oto h2{font-size:clamp(24px,4.6vw,38px);font-weight:900;line-height:1.25;margin:0 0 14px;}
-    .oto .sub{font-size:clamp(17px,2.6vw,21px);font-weight:800;color:#FDE68A;margin:0 0 24px;line-height:1.45;}
+    .oto .intro{font-size:17px;line-height:1.8;margin:0 0 26px;opacity:.97;}
+    .oto .badge{display:inline-block;background:#FDE68A;color:#7c2d12;font-weight:800;font-size:14px;padding:8px 18px;border-radius:999px;margin-bottom:16px;letter-spacing:.3px;}
+    .oto h2{font-size:clamp(23px,4.4vw,36px);font-weight:900;line-height:1.25;margin:0 0 10px;}
+    .oto .course-title{font-size:clamp(22px,4vw,32px);font-weight:900;color:#FDE68A;margin:8px 0 8px;}
+    .oto .sub{font-size:clamp(17px,2.6vw,21px);font-weight:800;margin:0 0 24px;line-height:1.45;}
     .oto p{font-size:16.5px;line-height:1.8;margin:0 0 16px;opacity:.97;}
     .oto .card{background:#fff;color:#1f2937;border-radius:16px;padding:26px 24px;margin:24px 0;box-shadow:0 18px 50px rgba(0,0,0,.25);text-align:right;}
     .oto .card h3{color:#1e3a8a;font-size:21px;font-weight:900;margin:0 0 16px;}
+    .oto .card p{opacity:1;}
     .oto .chk{list-style:none;padding:0;margin:0;}
     .oto .chk li{position:relative;padding:9px 30px 9px 0;font-size:16px;line-height:1.6;border-bottom:1px solid #f1f1f6;}
     .oto .chk li:last-child{border-bottom:none;}
@@ -535,24 +538,19 @@
     .oto .price .old{font-size:22px;color:#fca5a5;text-decoration:line-through;font-weight:700;}
     .oto .price .new{font-size:clamp(36px,9vw,54px);font-weight:900;color:#FDE68A;display:block;margin-top:2px;line-height:1.1;}
     .oto .price .note{font-size:14px;opacity:.85;margin-top:8px;}
-    .oto .form{background:#fff;border-radius:16px;padding:26px 22px;margin-top:12px;color:#1f2937;box-shadow:0 18px 50px rgba(0,0,0,.25);}
-    .oto .form h3{color:#1e3a8a;font-size:20px;font-weight:900;margin:0 0 6px;text-align:center;}
-    .oto .form .lead{font-size:15px;text-align:center;margin:0 0 18px;color:#4b5563;}
-    .oto .field{margin-bottom:14px;text-align:right;}
-    .oto .field label{display:block;font-weight:700;font-size:14px;margin-bottom:6px;color:#374151;}
-    .oto .field input{width:100%;box-sizing:border-box;font-family:inherit;font-size:16px;padding:13px 14px;border:2px solid #e5e7eb;border-radius:12px;outline:none;transition:border-color .15s;}
-    .oto .field input:focus{border-color:#7C3AED;}
-    .oto .field input.bad{border-color:#ef4444;}
-    .oto .err{color:#ef4444;font-size:14px;font-weight:700;margin:2px 0 0;}
-    .oto .submit{width:100%;font-family:inherit;font-size:19px;font-weight:900;color:#fff;background:linear-gradient(135deg,#10B981,#059669);border:none;border-radius:999px;padding:17px 22px;cursor:pointer;box-shadow:0 16px 36px -8px rgba(16,185,129,.6);transition:transform .15s;margin-top:6px;}
-    .oto .submit:hover{transform:translateY(-2px);}
-    .oto .submit[disabled]{opacity:.75;cursor:default;transform:none;}
-    .oto .secure{text-align:center;font-size:13px;color:#6b7280;margin-top:12px;line-height:1.6;}
-    .oto .ps{font-size:15.5px;line-height:1.8;background:rgba(255,255,255,.12);border-radius:14px;padding:20px 22px;margin-top:28px;}
+    .oto .cta{display:inline-block;text-decoration:none;width:100%;box-sizing:border-box;text-align:center;font-size:19px;font-weight:900;color:#fff;background:linear-gradient(135deg,#10B981,#059669);border-radius:999px;padding:18px 22px;box-shadow:0 16px 36px -8px rgba(16,185,129,.6);transition:transform .15s;}
+    .oto .cta:hover{transform:translateY(-2px);}
+    .oto .secure{text-align:center;font-size:13px;color:#e5e7eb;margin-top:12px;line-height:1.6;}
+    .oto .ps{font-size:15.5px;line-height:1.8;background:rgba(255,255,255,.12);border-radius:14px;padding:20px 22px;margin:26px 0;}
   </style>
   <section class="oto">
     <div class="wrap">
-      <p class="sub">הקורס שיעזור לכם לחזור לשליטה מול מתוק, בצקים ונשנושים - בלי ייסורי מצפון ובלי לוותר לעצמכם.</p>
+      <p class="intro">אבל אם אתם מרגישים שהבעיה האמיתית שלכם היא לא רק "מה לאכול" - אלא החשקים, המתוק, הבצקים, הנשנושים, האכילה הרגשית, והקושי לחזור למסלול אחרי חריגה... יש לי עבורכם הצעה חד־פעמית שמופיעה רק כאן בדף הזה.</p>
+
+      <span class="badge">הצעה חד־פעמית לדף זה בלבד</span>
+      <h2>רגע לפני שאתם ממשיכים - רוצים ללמוד איך לחזור לשליטה מול מתוק, בצקים ונשנושים?</h2>
+      <p class="course-title">קורס "שליטה באכילה"</p>
+      <p class="sub">הקורס שיעזור לכם לחזור לשליטה מול מתוק, בצקים ונשנושים - בלי ייסורי מצפון ובלי לוותר לעצמכם</p>
 
       <p>אם אתם מרגישים שאתם יודעים מה "צריך" לעשות, אבל ברגע האמת משהו משתלט - החשק למתוק, הבצק, העייפות, הסטרס, השעמום, או המשפט הזה בראש: "כבר הרסתי, אז נתחיל שוב מחר..." - הקורס הזה נבנה בדיוק בשבילכם.</p>
 
@@ -587,7 +585,11 @@
         </ul>
       </div>
 
-      <p><strong style="color:#FDE68A;">למה דווקא עכשיו?</strong><br>כי ברגע שסיימתם להירשם למדריך, אתם כבר בצעד הראשון. במקום רק לקרוא את המדריך ולנסות לבד - אתם יכולים לקבל גם קורס מסודר, ברור ופשוט שיעזור לכם להבין מה לעשות ברגעים הכי מאתגרים. זו לא עוד דיאטה. זו דרך ללמוד איך להתנהל מול אוכל בצורה רגועה, שפויה ומתאימה לחיים האמיתיים.</p>
+      <div class="card">
+        <h3>למה דווקא עכשיו?</h3>
+        <p>כי ברגע שסיימתם להירשם למדריך, אתם כבר בצעד הראשון. במקום רק לקרוא את המדריך ולנסות לבד - אתם יכולים לקבל גם קורס מסודר, ברור ופשוט שיעזור לכם להבין מה לעשות ברגעים הכי מאתגרים.</p>
+        <p style="margin-bottom:0;">זו לא עוד דיאטה. זו דרך ללמוד איך להתנהל מול אוכל בצורה רגועה, שפויה ומתאימה לחיים האמיתיים.</p>
+      </div>
 
       <p><strong style="color:#FDE68A;">הטבה מיוחדת לנרשמים למדריך בלבד</strong><br>במקום להשאיר אתכם רק עם המדריך החינמי, החלטתי לפתוח לכם כאן אפשרות להצטרף לקורס שליטה באכילה במחיר מיוחד לדף זה בלבד. ההצעה הזו מופיעה רק עכשיו, מיד אחרי ההרשמה למדריך.</p>
 
@@ -609,21 +611,18 @@
         </ul>
       </div>
 
-      <p>אתם לא צריכים לחכות ליום ראשון. אתם לא צריכים לחכות "שתהיו חזקים יותר". ואתם לא צריכים להמשיך להרגיש שכל חריגה הורסת לכם את כל התהליך. אפשר ללמוד איך לנהל את זה אחרת.</p>
-
-      <div class="form" id="oto-register">
-        <h3>כן, אני רוצה להצטרף לקורס שליטה באכילה</h3>
-        <p class="lead">השאירו שם ומייל. מיד לאחר מכן עוברים לתשלום מאובטח בקארדקום.</p>
-        <form id="oto-form" novalidate>
-          <div class="field"><label for="oto-name">שם מלא</label><input type="text" id="oto-name" name="name" autocomplete="name" placeholder="השם שלכם" required></div>
-          <div class="field"><label for="oto-email">כתובת מייל</label><input type="email" id="oto-email" name="email" autocomplete="email" inputmode="email" dir="ltr" placeholder="name@example.com" required></div>
-          <div class="err" id="oto-err"></div>
-          <button type="submit" class="submit" id="oto-submit">אני רוצה לחזור לשליטה</button>
-          <div class="secure">🔒 התשלום מאובטח | הגישה לקורס נפתחת מיד לאחר הרכישה | ניתן לצפות בקורס מכל מכשיר</div>
-        </form>
+      <div class="card">
+        <h3>זה הזמן להפסיק להתחיל כל פעם מחדש</h3>
+        <p>אתם לא צריכים לחכות ליום ראשון. אתם לא צריכים לחכות "שתהיו חזקים יותר". ואתם לא צריכים להמשיך להרגיש שכל חריגה הורסת לכם את כל התהליך.</p>
+        <p style="margin-bottom:0;">אפשר ללמוד איך לנהל את זה אחרת.</p>
       </div>
 
+      <a href="https://meitalshrim-ops.github.io/metabolife-landing/" class="cta">אני רוצה לחזור לשליטה</a>
+
       <div class="ps"><strong>רגע לפני שאתם ממשיכים...</strong><br>המדריך החינמי כבר בדרך אליכם, אבל הקורס ייתן לכם את הדרך המעשית להבין מה עושים בפועל כשמגיע החשק, כשיש חריגה, כשיש אכילה רגשית, וכשקשה לחזור למסלול. זו ההזדמנות שלכם לעשות את זה בצורה פשוטה, רגועה ומסודרת.</div>
+
+      <a href="https://meitalshrim-ops.github.io/metabolife-landing/" class="cta">כן, אני רוצה את הקורס במחיר המיוחד</a>
+      <div class="secure">🔒 התשלום מאובטח | הגישה לקורס נפתחת מיד לאחר הרכישה | ניתן לצפות בקורס מכל מכשיר</div>
     </div>
   </section>
 
@@ -757,37 +756,5 @@
     <p>© 2026 מטבולייף - מיטל שרים. כל הזכויות שמורות.</p>
   </footer>
 
-  <!-- OTO form -> Rav-Messer + Cardcom (same flow as the course sales page) -->
-  <script id="oto-script">
-  (function(){
-    var CARDCOM='https://secure.cardcom.solutions/EA/EA5/4pAaJ4D3NESWFg6pqmg/PaymentSP';
-    var API='https://metabolife-landing.vercel.app/api/subscribe';
-    var form=document.getElementById('oto-form');
-    if(!form)return;
-    var nameI=document.getElementById('oto-name'),emailI=document.getElementById('oto-email');
-    var errBox=document.getElementById('oto-err'),btn=document.getElementById('oto-submit');
-    var sending=false;
-    function showErr(m){errBox.textContent=m;}
-    function clearErr(){errBox.textContent='';}
-    function validEmail(v){return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);}
-    form.addEventListener('submit',function(ev){
-      ev.preventDefault();
-      if(sending)return;
-      clearErr();
-      var name=(nameI.value||'').trim(),email=(emailI.value||'').trim();
-      nameI.classList.remove('bad');emailI.classList.remove('bad');
-      if(name.length<2){nameI.classList.add('bad');showErr('נא למלא שם מלא');nameI.focus();return;}
-      if(!validEmail(email)){emailI.classList.add('bad');showErr('נא למלא כתובת מייל תקינה');emailI.focus();return;}
-      sending=true;btn.setAttribute('disabled','disabled');btn.textContent='מעבירים אתכם לתשלום מאובטח...';
-      try{if(window.fbq)fbq('track','InitiateCheckout',{value:197,currency:'ILS',content_name:'קורס שליטה באכילה - אפסייל מדריך'});}catch(e){}
-      var done=false;
-      function goPay(){ if(done)return; done=true; window.location.href=CARDCOM; }
-      try{
-        fetch(API,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({name:name,email:email}),keepalive:true}).then(goPay,goPay);
-      }catch(e){}
-      setTimeout(goPay,3500);
-    });
-  })();
-  </script>
 </body>
 </html>
