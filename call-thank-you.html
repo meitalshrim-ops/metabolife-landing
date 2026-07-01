@@ -210,7 +210,7 @@
     var waURL='https://wa.me/'+WHATSAPP_NUMBER+'?text='+encodeURIComponent(lines.join('\n'));
     document.getElementById('waBtn').setAttribute('href', waURL);
 
-    if(window.fbq){fbq('track','CompleteRegistration',{content_name:'שאלון התאמה - שיחת ייעוץ'});}
+    if(window.fbq){fbq('track','Lead',{content_name:'שיחת ייעוץ - שאלון הושלם'});fbq('track','CompleteRegistration',{content_name:'שאלון התאמה - שיחת ייעוץ'});}
     // שמירת תשובות השאלון בגוגל שיטס (מעדכן את שורת הליד לפי המזהה)
     if(SHEETS_ENDPOINT){
       try{ fetch(SHEETS_ENDPOINT,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},keepalive:true,
