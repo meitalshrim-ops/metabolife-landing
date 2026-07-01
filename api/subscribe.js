@@ -33,7 +33,9 @@ module.exports = async function handler(req, res) {
     const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
     if (!emailOk) { res.status(400).json({ ok: false, error: 'email' }); return; }
 
-    const listId = parseInt(process.env.RAV_LIST_ID || '103192', 10);
+    var reqList = parseInt(body.list_id, 10);
+    const listId = (reqList && reqList > 0) ? reqList : parseInt(process.env.RAV_LIST_ID || '103192', 10);
+    const phone = String(body.phone || '').trim().slice(0, 40);
 
     // פיצול "שם מלא" לשם פרטי + משפחה (Responder משתמש ב-first/last/name, לא first_name)
     const parts = name.split(/\s+/).filter(Boolean);
@@ -60,7 +62,7 @@ module.exports = async function handler(req, res) {
     const sr = await fetch(SUBS_URL, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + token },
-      body: JSON.stringify({ email: email, name: name, first: first, last: last, list_ids: [listId], override: true })
+      body: JSON.stringify({ email: email, name: name, first: first, last: last, phone: phone || undefined, list_ids: [listId], override: true })
     });
     const sj = await sr.json().catch(() => ({}));
 
