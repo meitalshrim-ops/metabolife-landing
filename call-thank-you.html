@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>נרשמתם! שאלון התאמה לשיחה עם מיטל שרים | מטבולייף</title>
+  <meta name="description" content="נרשמתם לשיחת הייעוץ. נשאר רק למלא שאלון התאמה קצר, ובסיומו לבחור מועד ביומן של מיטל." />
+  <meta name="robots" content="noindex" />
+
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init','999361456096337');fbq('track','PageView');fbq('track','Lead',{content_name:'שיחת ייעוץ - נרשם'});
+  </script>
+  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=999361456096337&ev=PageView&noscript=1"/></noscript>
+  <!-- End Meta Pixel Code -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root{--blue:#1E3A8A;--blue-dark:#172554;--green:#10B981;--green-dark:#059669;--purple:#7C3AED;--cream:#FAF7F2;}
+    *{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{font-family:"Heebo",system-ui,sans-serif;background:var(--cream);color:var(--blue);line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+    img{max-width:100%;display:block;} a{color:inherit;text-decoration:none;}
+    .container{max-width:760px;margin:0 auto;padding:0 20px;}
+
+    .header{background:#fff;border-bottom:1px solid rgba(30,58,138,0.05);padding:14px 0;position:sticky;top:0;z-index:50;}
+    .header-inner{display:flex;justify-content:center;}
+    .header-logo{height:60px;width:auto;object-fit:contain;}
+    @media(max-width:640px){.header-logo{height:50px;}}
+
+    .hero{background:linear-gradient(135deg,var(--blue) 0%,var(--purple) 52%,var(--green) 100%);color:#fff;text-align:center;padding:46px 20px 52px;position:relative;overflow:hidden;}
+    .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 18% 22%,rgba(255,255,255,.15) 0%,transparent 42%),radial-gradient(circle at 84% 80%,rgba(255,255,255,.12) 0%,transparent 42%);}
+    .hero>*{position:relative;z-index:1;}
+    .vmark{width:78px;height:78px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;margin:0 auto 18px;box-shadow:0 14px 34px rgba(0,0,0,.24);}
+    .vmark svg{width:40px;height:40px;color:var(--green);}
+    .hero h1{font-size:clamp(25px,4.4vw,38px);font-weight:900;line-height:1.2;margin-bottom:12px;}
+    .hero p{font-size:clamp(15px,2vw,18px);opacity:.97;max-width:620px;margin:0 auto;line-height:1.7;}
+
+    section.block{padding:44px 0;}
+    .stitle{font-size:clamp(23px,3.4vw,32px);font-weight:900;color:var(--blue);text-align:center;margin-bottom:12px;line-height:1.25;}
+    .stitle .pop{color:var(--purple);} .stitle .grn{color:var(--green-dark);}
+    .lead{font-size:16.5px;color:rgba(30,58,138,.82);text-align:center;max-width:640px;margin:0 auto 26px;line-height:1.75;}
+
+    /* form */
+    .form-card{background:#fff;border-radius:24px;padding:30px 28px;max-width:640px;margin:0 auto;box-shadow:0 26px 64px -22px rgba(124,58,237,.4);border-top:6px solid var(--purple);text-align:right;}
+    .fld{margin-bottom:18px;}
+    .fld label{display:block;font-weight:800;font-size:15.5px;color:var(--blue);margin:0 2px 8px;line-height:1.5;}
+    .fld .hint{font-weight:500;font-size:13px;color:rgba(30,58,138,.6);}
+    .fld input[type=text],.fld input[type=tel],.fld input[type=email],.fld textarea,.fld select{width:100%;padding:13px 15px;border:2px solid #E5E7EB;border-radius:12px;font-family:inherit;font-size:16px;background:#FAFAFB;color:var(--blue);}
+    .fld textarea{min-height:78px;resize:vertical;line-height:1.6;}
+    .fld input:focus,.fld textarea:focus,.fld select:focus{outline:none;border-color:var(--purple);background:#fff;}
+    .checks{display:grid;grid-template-columns:1fr;gap:9px;}
+    @media(min-width:560px){.checks{grid-template-columns:1fr 1fr;}}
+    .chk{display:flex;align-items:center;gap:10px;background:#FAFAFB;border:2px solid #E5E7EB;border-radius:12px;padding:11px 13px;cursor:pointer;font-size:15px;font-weight:600;color:var(--blue);transition:.12s;}
+    .chk:hover{border-color:#C7D2FE;}
+    .chk input{width:20px;height:20px;flex-shrink:0;accent-color:var(--green);cursor:pointer;}
+    .chk:has(input:checked){border-color:var(--green);background:#ECFDF5;}
+    .subit{width:100%;padding:17px;background:linear-gradient(135deg,var(--green),var(--green-dark));color:#fff;border:none;border-radius:14px;font-family:inherit;font-weight:900;font-size:18px;cursor:pointer;box-shadow:0 12px 28px -8px rgba(16,185,129,.5);transition:transform .15s;margin-top:6px;}
+    .subit:hover{transform:translateY(-2px);}
+    .miss{color:#B91C1C;font-weight:700;font-size:14px;text-align:center;margin-top:12px;display:none;}
+
+    /* success panel */
+    .success{display:none;max-width:640px;margin:0 auto;background:#fff;border-radius:24px;padding:38px 28px;text-align:center;box-shadow:0 26px 64px -22px rgba(16,185,129,.45);border-top:6px solid var(--green);}
+    .success .vmark{box-shadow:0 12px 30px -10px rgba(16,185,129,.5);}
+    .success h2{font-size:clamp(23px,3.4vw,30px);font-weight:900;color:var(--blue);margin-bottom:12px;}
+    .success p{font-size:16px;color:rgba(30,58,138,.85);line-height:1.8;max-width:520px;margin:0 auto 18px;}
+    .cal-btn{display:inline-block;padding:17px 40px;background:linear-gradient(135deg,var(--purple),var(--blue));color:#fff;border-radius:999px;font-weight:900;font-size:clamp(16px,2vw,19px);box-shadow:0 16px 38px -12px rgba(124,58,237,.6);transition:transform .15s;}
+    .cal-btn:hover{transform:translateY(-2px);}
+    .wa-line{margin-top:20px;font-size:14.5px;color:rgba(30,58,138,.7);line-height:1.7;}
+    .wa-btn{display:inline-flex;align-items:center;gap:8px;margin-top:8px;padding:11px 22px;border-radius:999px;background:linear-gradient(135deg,#25D366,#128C7E);color:#fff;font-weight:800;font-size:15px;}
+    .wa-btn svg{width:18px;height:18px;}
+
+    .signoff{text-align:center;padding:28px 20px;background:#fff;}
+    .signoff .it{font-style:italic;color:rgba(30,58,138,.7);font-size:15px;} .signoff .nm{font-size:20px;font-weight:900;color:var(--blue);margin-top:4px;} .signoff .role{font-size:13.5px;color:rgba(30,58,138,.6);margin-top:3px;}
+    .footer{background:var(--blue-dark);color:rgba(255,255,255,.55);padding:22px;text-align:center;font-size:13px;}
+    .footer .tag{font-size:15px;color:rgba(255,255,255,.85);font-weight:600;margin-bottom:7px;}
+    @media(max-width:640px){section.block{padding:34px 0;}.form-card{padding:26px 18px;}}
+  </style>
+</head>
+<body>
+
+  <header class="header"><div class="header-inner container"><img src="images/metabolife-logo.png" alt="מטבולייף" class="header-logo"></div></header>
+
+  <section class="hero">
+    <div class="container">
+      <div class="vmark"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></div>
+      <h1>נרשמתם בהצלחה! נשאר צעד אחד קטן</h1>
+      <p>כדי שאגיע לשיחה מוכנה ואוכל לעזור לכם כמה שיותר, מלאו את שאלון ההתאמה הקצר. בסיום ייפתח היומן שלי ותבחרו מועד לשיחה.</p>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="container">
+      <h2 class="stitle">שאלון <span class="pop">התאמה קצר</span></h2>
+      <p class="lead">כמה שאלות שיעזרו לי להכיר אתכם עוד לפני שנדבר. אין תשובות נכונות או שגויות, פשוט כתבו בכנות.</p>
+
+      <form id="qForm" class="form-card" onsubmit="return submitQ(event)">
+        <div class="fld"><label>שם מלא</label><input id="nm" name="nm" type="text" required></div>
+        <div class="fld"><label>טלפון</label><input id="ph" name="ph" type="tel" required></div>
+        <div class="fld"><label>דוא"ל</label><input id="em" name="em" type="email" required></div>
+
+        <div class="fld"><label>בני כמה אתם?</label>
+          <select id="age" required>
+            <option value="" selected disabled>בחרו טווח גיל</option>
+            <option>מתחת ל-40</option><option>40-50</option><option>51-60</option><option>61-70</option><option>71 ומעלה</option>
+          </select>
+        </div>
+
+        <div class="fld"><label>מה המטרה שלכם? למה אתם רוצים לעשות שינוי עכשיו?</label>
+          <textarea id="goal" required placeholder="לדוגמה: לרדת במשקל, להרגיש יותר אנרגיה, לאזן סוכר, להפסיק לעלות ולרדת..."></textarea>
+        </div>
+
+        <div class="fld"><label>מה כבר ניסיתם עד היום, ומה לא עבד?</label>
+          <textarea id="tried" required placeholder="ספרו בקצרה על דיאטות או ניסיונות קודמים ומה קרה בסוף"></textarea>
+        </div>
+
+        <div class="fld"><label>מה הכי מפריע לכם היום? <span class="hint">(אפשר לסמן כמה)</span></label>
+          <div class="checks">
+            <label class="chk"><input type="checkbox" name="pain" value="משקל עודף">משקל עודף שלא יורד</label>
+            <label class="chk"><input type="checkbox" name="pain" value="חשקים למתוק ובצק">חשקים למתוק ובצק</label>
+            <label class="chk"><input type="checkbox" name="pain" value="אכילה רגשית">אכילה רגשית ונפילות</label>
+            <label class="chk"><input type="checkbox" name="pain" value="עייפות וחוסר אנרגיה">עייפות וחוסר אנרגיה</label>
+            <label class="chk"><input type="checkbox" name="pain" value="בעיות עיכול">בעיות עיכול</label>
+            <label class="chk"><input type="checkbox" name="pain" value="כאבי מפרקים ושרירים">כאבי מפרקים ושרירים</label>
+            <label class="chk"><input type="checkbox" name="pain" value="סוכר / לחץ דם / כולסטרול">סוכר / לחץ דם / כולסטרול</label>
+            <label class="chk"><input type="checkbox" name="pain" value="שינה לא טובה">שינה לא טובה</label>
+          </div>
+        </div>
+
+        <div class="fld"><label>איך נראה יום אכילה טיפוסי אצלכם? <span class="hint">(בגדול, בלי להיכנס לפרטים)</span></label>
+          <textarea id="day" placeholder="בוקר, צהריים, ערב ונשנושים באמצע"></textarea>
+        </div>
+
+        <div class="fld"><label>עד כמה אתם רציניים לגבי שינוי עכשיו?</label>
+          <select id="ready" required>
+            <option value="" selected disabled>בחרו את המשפט שהכי מתאים</option>
+            <option>מוכן/ה להתחיל מיד</option>
+            <option>רציני/ת מאוד, רוצה להבין איך זה עובד</option>
+            <option>בודק/ת אפשרויות בשלב הזה</option>
+          </select>
+        </div>
+
+        <div class="fld"><label>משהו נוסף שחשוב שאדע לפני השיחה? <span class="hint">(לא חובה)</span></label>
+          <textarea id="notes" placeholder="כל דבר שתרצו לשתף"></textarea>
+        </div>
+
+        <button type="submit" class="subit">סיימתי, קחו אותי ליומן לבחירת מועד ›</button>
+        <p class="miss" id="miss">אנא מלאו את השדות המסומנים</p>
+      </form>
+
+      <div class="success" id="success">
+        <div class="vmark"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></div>
+        <h2>תודה! השאלון התקבל 💚</h2>
+        <p>נשאר רק לבחור מועד לשיחה. לחצו על הכפתור, בחרו ביומן את היום והשעה שנוחים לכם, ואני אחזור אליכם לתיאום אחרון.</p>
+        <a href="https://calendar.app.google/WXMs1xKHpjwdHdd3A" target="_blank" rel="noopener" class="cal-btn" id="calBtn">בחירת מועד לשיחה ביומן ›</a>
+        <div class="wa-line">
+          לא נפתח היומן? אפשר גם לשלוח לי את השאלון ישירות בוואטסאפ:<br>
+          <a href="#" id="waBtn" class="wa-btn" target="_blank" rel="noopener"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.477-.913z"/></svg>שליחת השאלון בוואטסאפ</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="signoff">
+    <p class="it">מחכה לפגוש אתכם, באהבה רבה,</p>
+    <p class="nm">מיטל שרים</p>
+    <p class="role">נטורופתית, מאמנת תזונה ומדריכת כושר | מטבולייף</p>
+  </div>
+  <footer class="footer"><p class="tag">תזונה • תנועה • בריאות</p><p>© 2026 מטבולייף - מיטל שרים. כל הזכויות שמורות.</p></footer>
+
+  <script>
+  var WHATSAPP_NUMBER = '972543192961'; // מיטל
+  var CALENDAR_URL = 'https://calendar.app.google/WXMs1xKHpjwdHdd3A';
+  var SHEETS_ENDPOINT = 'https://script.google.com/macros/s/AKfycbx-AippVj03Dg71r9o5tj4KXIPnlDcPfE7tfyiFcUuUBEQZYDBBMG978JMaNDXptQvfQg/exec';
+  var MB_LEADID = '';
+
+  // Prefill from URL params or sessionStorage
+  (function(){
+    var p=new URLSearchParams(location.search), lead={};
+    try{lead=JSON.parse(sessionStorage.getItem('mb_lead')||'{}');}catch(e){}
+    var nm=p.get('nm')||lead.nm||'', ph=p.get('ph')||lead.ph||'', em=p.get('em')||lead.em||'';
+    MB_LEADID=p.get('leadId')||lead.leadId||('L'+Date.now());
+    if(nm)document.getElementById('nm').value=nm;
+    if(ph)document.getElementById('ph').value=ph;
+    if(em)document.getElementById('em').value=em;
+  })();
+
+  function submitQ(e){
+    e.preventDefault();
+    var f=document.getElementById('qForm');
+    if(!f.checkValidity()){document.getElementById('miss').style.display='block';f.reportValidity();return false;}
+    var pains=[].slice.call(document.querySelectorAll('input[name=pain]:checked')).map(function(c){return c.value;});
+    var g=function(id){return (document.getElementById(id).value||'').trim();};
+    var lines=[
+      'שאלון התאמה - שיחת ייעוץ',
+      'שם: '+g('nm'),
+      'טלפון: '+g('ph'),
+      'מייל: '+g('em'),
+      'גיל: '+g('age'),
+      'מטרה: '+g('goal'),
+      'מה ניסו: '+g('tried'),
+      'מה מפריע: '+(pains.join(', ')||'-'),
+      'יום אכילה: '+(g('day')||'-'),
+      'רצינות: '+g('ready'),
+      'הערות: '+(g('notes')||'-')
+    ];
+    var waURL='https://wa.me/'+WHATSAPP_NUMBER+'?text='+encodeURIComponent(lines.join('\n'));
+    document.getElementById('waBtn').setAttribute('href', waURL);
+
+    if(window.fbq){fbq('track','CompleteRegistration',{content_name:'שאלון התאמה - שיחת ייעוץ'});}
+    // שמירת תשובות השאלון בגוגל שיטס (מעדכן את שורת הליד לפי המזהה)
+    if(SHEETS_ENDPOINT){
+      try{ fetch(SHEETS_ENDPOINT,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},keepalive:true,
+        body:JSON.stringify({action:'questionnaire',leadId:MB_LEADID,name:g('nm'),phone:g('ph'),email:g('em'),age:g('age'),goal:g('goal'),tried:g('tried'),pains:pains.join(', '),day:g('day'),ready:g('ready'),notes:g('notes'),source:'דף שיחת ייעוץ'})}).catch(function(){}); }catch(err){}
+    }
+
+    // show success + calendar
+    f.style.display='none';
+    var s=document.getElementById('success');
+    s.style.display='block';
+    s.scrollIntoView({behavior:'smooth',block:'center'});
+
+    // best-effort: open WhatsApp with the answers (fallback button exists in the panel)
+    try{window.open(waURL,'_blank');}catch(err){}
+    return false;
+  }
+  </script>
+
+</body>
+</html>
