@@ -401,14 +401,12 @@
     // רישום לרשימת "מתעניינים בליווי" ברב מסר (דרך פרוקסי Vercel, לא חוסם את המעבר)
     try{ fetch('https://metabolife-landing.vercel.app/api/subscribe',{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},keepalive:true,
       body:JSON.stringify({name:nm,email:em,phone:ph,list_id:107293})}).catch(function(){}); }catch(err){}
-    // פתיחת וואטסאפ אלייך עם פרטי הליד
+    // אחרי הרישום, מעבר ישיר לוואטסאפ אלייך עם פרטי הליד
     var waMsg='היי מיטל, מילאתי טופס לשיחת ייעוץ.%0A'+
               'שם: '+encodeURIComponent(nm)+'%0A'+
               'טלפון: '+encodeURIComponent(ph)+'%0A'+
               'מייל: '+encodeURIComponent(em||'-');
-    window.open('https://wa.me/972543192961?text='+waMsg,'_blank');
-    var q='nm='+encodeURIComponent(nm)+'&ph='+encodeURIComponent(ph)+'&em='+encodeURIComponent(em)+'&leadId='+encodeURIComponent(leadId);
-    window.location.href = THANKYOU_PAGE + '?' + q;
+    window.location.href = 'https://wa.me/972543192961?text='+waMsg;
     return false;
   }
   </script>
