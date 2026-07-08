@@ -498,15 +498,27 @@
     }
     boxes.forEach(function(b){b.addEventListener('change',upd);});
   })();
-  // Lead form -> WhatsApp
+  // Lead form -> save to Google Sheet + Rav-Messer -> open WhatsApp
+  var SHEETS_ENDPOINT = 'https://script.google.com/macros/s/AKfycbx-AippVj03Dg71r9o5tj4KXIPnlDcPfE7tfyiFcUuUBEQZYDBBMG978JMaNDXptQvfQg/exec';
   function mbLead(e){
     e.preventDefault();
-    if(window.fbq)fbq('track','Lead',{content_name:'טופס ליווי אישי'});
     var f=e.target;
+    var nm=f.nm.value.trim(), ph=f.ph.value.trim(), em=(f.em.value||'').trim();
+    var leadId='L'+Date.now()+Math.floor(Math.random()*1000);
+    if(window.fbq)fbq('track','Lead',{content_name:'טופס ליווי אישי'});
+    // שמירת הליד בגוגל שיטס
+    if(SHEETS_ENDPOINT){
+      try{ fetch(SHEETS_ENDPOINT,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},keepalive:true,
+        body:JSON.stringify({action:'lead',leadId:leadId,name:nm,phone:ph,email:em,consent:true,source:'דף ליווי אישי'})}).catch(function(){}); }catch(err){}
+    }
+    // רישום לרשימת "מתעניינים בליווי" (107293) ברב מסר
+    try{ fetch('https://metabolife-landing.vercel.app/api/subscribe',{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},keepalive:true,
+      body:JSON.stringify({name:nm,email:em,phone:ph,list_id:107293})}).catch(function(){}); }catch(err){}
+    // פתיחת וואטסאפ אלייך עם פרטי הליד
     var msg='היי מיטל, אשמח לשיחת התאמה אישית לליווי.%0A'+
-            'שם: '+encodeURIComponent(f.nm.value)+'%0A'+
-            'טלפון: '+encodeURIComponent(f.ph.value)+'%0A'+
-            'מייל: '+encodeURIComponent(f.em.value||'-');
+            'שם: '+encodeURIComponent(nm)+'%0A'+
+            'טלפון: '+encodeURIComponent(ph)+'%0A'+
+            'מייל: '+encodeURIComponent(em||'-');
     window.open('https://wa.me/972543192961?text='+msg,'_blank');
     return false;
   }
