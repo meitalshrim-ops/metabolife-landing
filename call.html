@@ -417,7 +417,7 @@
   <footer class="footer"><p class="tag">תזונה • תנועה • בריאות</p><p>© 2026 מטבולייף - מיטל שרים. כל הזכויות שמורות.</p></footer>
 
   <script>
-  // Lead form -> save to Google Sheet -> redirect to adaptation questionnaire (thank-you page)
+  // Lead form -> save to Google Sheet + Rav-Messer -> open WhatsApp (new tab) -> redirect to adaptation questionnaire (thank-you page)
   var THANKYOU_PAGE = 'call-thank-you.html';
   var SHEETS_ENDPOINT = 'https://script.google.com/macros/s/AKfycbx-AippVj03Dg71r9o5tj4KXIPnlDcPfE7tfyiFcUuUBEQZYDBBMG978JMaNDXptQvfQg/exec';
   function mbLead(e){
@@ -435,12 +435,15 @@
     // רישום לרשימת "מתעניינים בליווי" ברב מסר (דרך פרוקסי Vercel, לא חוסם את המעבר)
     try{ fetch('https://metabolife-landing.vercel.app/api/subscribe',{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},keepalive:true,
       body:JSON.stringify({name:nm,email:em,phone:ph,list_id:107293})}).catch(function(){}); }catch(err){}
-    // אחרי הרישום, מעבר ישיר לוואטסאפ אלייך עם פרטי הליד
+    // פתיחת וואטסאפ אלייך עם פרטי הליד (בטאב חדש)
     var waMsg='היי מיטל, מילאתי טופס לשיחת ייעוץ.%0A'+
               'שם: '+encodeURIComponent(nm)+'%0A'+
               'טלפון: '+encodeURIComponent(ph)+'%0A'+
               'מייל: '+encodeURIComponent(em||'-');
-    window.location.href = 'https://wa.me/972543192961?text='+waMsg;
+    window.open('https://wa.me/972543192961?text='+waMsg,'_blank');
+    // מעבר לשאלון + קביעת פגישה (בהשהיה קצרה כדי שהוואטסאפ יספיק להיפתח)
+    var q='nm='+encodeURIComponent(nm)+'&ph='+encodeURIComponent(ph)+'&em='+encodeURIComponent(em)+'&leadId='+encodeURIComponent(leadId);
+    setTimeout(function(){ window.location.href = THANKYOU_PAGE + '?' + q; }, 500);
     return false;
   }
 
