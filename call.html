@@ -447,17 +447,28 @@
     return false;
   }
 
-  // גלילה חלקה ישירות לכרטיס טופס ההרשמה, עם קיזוז לגובה הכותרת הדביקה
+  // גלילה חלקה לכרטיס טופס ההרשמה. מתקנת את המיקום שוב אחרי שתמונות/סרטונים
+  // נטענים (lazy) ודוחפים את הטופס למטה, כדי שתמיד ננחת בדיוק על הטופס.
   document.querySelectorAll('a[href="#register"]').forEach(function(a){
     a.addEventListener('click', function(e){
       var sec = document.getElementById('register');
       if(!sec) return;
       e.preventDefault();
       var target = sec.querySelector('.form-card') || sec;
-      var header = document.querySelector('.header');
-      var offset = (header ? header.offsetHeight : 0) + 14;
-      var y = target.getBoundingClientRect().top + window.pageYOffset - offset;
-      window.scrollTo({ top: y, behavior: 'smooth' });
+      var cancelled = false;
+      function stop(){ cancelled = true; }
+      window.addEventListener('wheel', stop, {passive:true, once:true});
+      window.addEventListener('touchmove', stop, {passive:true, once:true});
+      function go(){
+        if(cancelled) return;
+        var header = document.querySelector('.header');
+        var offset = (header ? header.offsetHeight : 0) + 14;
+        var y = target.getBoundingClientRect().top + window.pageYOffset - offset;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+      }
+      go();
+      setTimeout(go, 450);
+      setTimeout(go, 950);
     });
   });
   </script>
