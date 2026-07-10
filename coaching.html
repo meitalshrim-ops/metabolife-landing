@@ -511,9 +511,7 @@
       try{ fetch(SHEETS_ENDPOINT,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},keepalive:true,
         body:JSON.stringify({action:'lead',leadId:leadId,name:nm,phone:ph,email:em,consent:true,source:'דף ליווי אישי'})}).catch(function(){}); }catch(err){}
     }
-    // רישום לרשימת "מתעניינים בליווי" (107293) ברב מסר
-    try{ fetch('https://metabolife-landing.vercel.app/api/subscribe',{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},keepalive:true,
-      body:JSON.stringify({name:nm,email:em,phone:ph,list_id:107293})}).catch(function(){}); }catch(err){}
+    // דף הליווי מגיע רק לוואטסאפ (בלי רב מסר), לפי בקשת מיטל 2026-07-10
     // פתיחת וואטסאפ אלייך עם פרטי הליד
     var msg='היי מיטל, אשמח לשיחת התאמה אישית לליווי.%0A'+
             'שם: '+encodeURIComponent(nm)+'%0A'+
