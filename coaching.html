@@ -460,8 +460,6 @@
           <input id="nm" name="nm" type="text" required>
           <label for="ph">טלפון</label>
           <input id="ph" name="ph" type="tel" required>
-          <label for="em">דוא"ל</label>
-          <input id="em" name="em" type="email" required>
           <button type="submit">אני רוצה שיחת התאמה אישית 💚</button>
           <p class="tiny">בלחיצה תיפתח שיחת וואטסאפ אליי עם הפרטים שלכם</p>
         </form>
@@ -509,12 +507,11 @@
   function mbLead(e){
     e.preventDefault();
     var f=e.target;
-    var nm=f.nm.value.trim(), ph=f.ph.value.trim(), em=(f.em.value||'').trim();
+    var nm=f.nm.value.trim(), ph=f.ph.value.trim();
     if(window.fbq)fbq('track','Lead',{content_name:'טופס ליווי אישי'});
     var msg='היי מיטל, אשמח לשיחת התאמה אישית לליווי.%0A'+
             'שם: '+encodeURIComponent(nm)+'%0A'+
-            'טלפון: '+encodeURIComponent(ph)+'%0A'+
-            'מייל: '+encodeURIComponent(em||'-');
+            'טלפון: '+encodeURIComponent(ph);
     var wa='https://wa.me/972543192961?text='+msg;
     var card=f.closest('.form-card');
     if(card){
@@ -572,8 +569,6 @@
         <input id="mnm" name="nm" type="text" required>
         <label for="mph">טלפון</label>
         <input id="mph" name="ph" type="tel" required>
-        <label for="mem">דוא"ל</label>
-        <input id="mem" name="em" type="email">
         <button type="submit">אני רוצה שיחת התאמה אישית 💚</button>
         <p class="tiny">בלחיצה תיפתח שיחת וואטסאפ אליי עם הפרטים שלכם</p>
       </form>
