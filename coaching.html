@@ -498,20 +498,13 @@
     }
     boxes.forEach(function(b){b.addEventListener('change',upd);});
   })();
-  // Lead form -> save to Google Sheet + Rav-Messer -> open WhatsApp
-  var SHEETS_ENDPOINT = 'https://script.google.com/macros/s/AKfycbx-AippVj03Dg71r9o5tj4KXIPnlDcPfE7tfyiFcUuUBEQZYDBBMG978JMaNDXptQvfQg/exec';
+  // Lead form -> open WhatsApp only (no Google Sheets, no Rav-Messer) - per Meital 2026-07-20
   function mbLead(e){
     e.preventDefault();
     var f=e.target;
     var nm=f.nm.value.trim(), ph=f.ph.value.trim(), em=(f.em.value||'').trim();
-    var leadId='L'+Date.now()+Math.floor(Math.random()*1000);
     if(window.fbq)fbq('track','Lead',{content_name:'טופס ליווי אישי'});
-    // שמירת הליד בגוגל שיטס
-    if(SHEETS_ENDPOINT){
-      try{ fetch(SHEETS_ENDPOINT,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},keepalive:true,
-        body:JSON.stringify({action:'lead',leadId:leadId,name:nm,phone:ph,email:em,consent:true,source:'דף ליווי אישי'})}).catch(function(){}); }catch(err){}
-    }
-    // דף הליווי מגיע רק לוואטסאפ (בלי רב מסר), לפי בקשת מיטל 2026-07-10
+    // דף הליווי מגיע רק לוואטסאפ שלי (בלי גוגל שיטס, בלי רב מסר)
     // פתיחת וואטסאפ אלייך עם פרטי הליד
     var msg='היי מיטל, אשמח לשיחת התאמה אישית לליווי.%0A'+
             'שם: '+encodeURIComponent(nm)+'%0A'+
