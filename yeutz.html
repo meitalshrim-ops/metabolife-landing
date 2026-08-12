@@ -444,11 +444,24 @@
     return false;
   }
 
-  // גלילה חלקה לטופס מכל כפתור שמפנה ל-#register
+  // גלילה חלקה לכרטיס הטופס מכל כפתור בדף. מתקנת את המיקום שוב אחרי
+  // שתמונות וסרטונים נטענים (lazy) ודוחפים את הטופס למטה, כדי שתמיד ננחת
+  // בדיוק על הטופס ולא באמצע הסקשן.
   document.querySelectorAll('a[href="#register"]').forEach(function(a){
     a.addEventListener('click', function(e){
-      var t = document.getElementById('register');
-      if(t){ e.preventDefault(); t.scrollIntoView({behavior:'smooth', block:'start'}); }
+      var sec = document.getElementById('register');
+      if(!sec) return;
+      e.preventDefault();
+      var target = sec.querySelector('.form-card') || sec;
+      var cancelled = false;
+      function stop(){ cancelled = true; }
+      window.addEventListener('wheel', stop, {passive:true, once:true});
+      window.addEventListener('touchstart', stop, {passive:true, once:true});
+      function go(){ if(cancelled) return; target.scrollIntoView({behavior:'smooth', block:'center'}); }
+      go();
+      setTimeout(go, 420);
+      setTimeout(go, 900);
+      setTimeout(function(){ if(!cancelled){ var f = document.getElementById('nm'); if(f) try{ f.focus({preventScroll:true}); }catch(err){} } }, 1100);
     });
   });
   </script>
