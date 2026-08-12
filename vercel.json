@@ -2,6 +2,7 @@
   "rewrites": [
     { "source": "/", "destination": "/madrich.html" },
     { "source": "/call", "destination": "/call.html" },
-    { "source": "/coaching", "destination": "/coaching.html" }
+    { "source": "/coaching", "destination": "/coaching.html" },
+    { "source": "/yeutz", "destination": "/yeutz.html" }
   ]
 }
