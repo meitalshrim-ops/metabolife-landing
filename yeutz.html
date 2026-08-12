@@ -314,7 +314,7 @@
   <section class="block cream" id="register" style="scroll-margin-top:90px;">
     <div class="container">
       <h2 class="stitle">להרשמה לשיחה המיוחדת <span class="grn">עם מיטל</span></h2>
-      <p class="lead">השאירו פרטים, ומיד אחרי כן תמלאו שאלון התאמה קצר ותבחרו מועד ביומן שלי.</p>
+      <p class="lead">השאירו פרטים ומיד תעברו לוואטסאפ, כדי שנתאם יחד את מועד השיחה.</p>
       <div class="form-card">
         <h3>אני רוצה לקבוע שיחה עם מיטל</h3>
         <p class="fp">10 שיחות בלבד בחודש. תפסו את המקום שלכם עכשיו.</p>
@@ -324,7 +324,7 @@
           <label for="ph">טלפון</label>
           <input id="ph" name="ph" type="tel" required>
           <button type="submit">שלחו פרטים ואחזור אליכם לשיחה ›</button>
-          <p class="tiny">לאחר ההרשמה תועברו לשאלון התאמה קצר ולבחירת מועד ביומן</p>
+          <p class="tiny">מיד לאחר ההרשמה תועברו לוואטסאפ עם הודעה מוכנה למיטל</p>
         </form>
       </div>
       <p class="qual">כדי שאוכל לעזור באמת, השיחה מתאימה למי שרציני/ת לעשות שינוי אמיתי, מוכן/ה לתהליך אישי, ולא מחפש/ת עוד דיאטה זמנית.</p>
@@ -414,8 +414,7 @@
   <footer class="footer"><p class="tag">תזונה • תנועה • בריאות</p><p>© 2026 מטבולייף - מיטל שרים. כל הזכויות שמורות.</p></footer>
 
   <script>
-  // Lead form -> save to Google Sheet -> redirect to adaptation questionnaire (thank-you page)
-  var THANKYOU_PAGE = 'call-thank-you.html';
+  // Lead form -> save to Google Sheet + Rav-Messer -> redirect to Meital's WhatsApp
   var SHEETS_ENDPOINT = 'https://script.google.com/macros/s/AKfycbx-AippVj03Dg71r9o5tj4KXIPnlDcPfE7tfyiFcUuUBEQZYDBBMG978JMaNDXptQvfQg/exec';
   function mbLead(e){
     e.preventDefault();
