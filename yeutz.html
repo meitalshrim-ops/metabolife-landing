@@ -323,9 +323,6 @@
           <input id="nm" name="nm" type="text" required>
           <label for="ph">טלפון</label>
           <input id="ph" name="ph" type="tel" required>
-          <label for="em">דוא"ל</label>
-          <input id="em" name="em" type="email" required>
-          <label class="consent"><input id="consent" type="checkbox" required><span>אני מאשר/ת קבלת תכנים, טיפים ועדכונים ממיטל שרים במייל ובוואטסאפ.</span></label>
           <button type="submit">שלחו פרטים ואחזור אליכם לשיחה ›</button>
           <p class="tiny">לאחר ההרשמה תועברו לשאלון התאמה קצר ולבחירת מועד ביומן</p>
         </form>
@@ -423,7 +420,7 @@
   function mbLead(e){
     e.preventDefault();
     var f=e.target;
-    var nm=f.nm.value.trim(), ph=f.ph.value.trim(), em=f.em.value.trim();
+    var nm=f.nm.value.trim(), ph=f.ph.value.trim(), em='';
     var leadId = 'L'+Date.now()+Math.floor(Math.random()*1000);
     try{ sessionStorage.setItem('mb_lead', JSON.stringify({nm:nm, ph:ph, em:em, leadId:leadId})); }catch(err){}
     if(window.fbq)fbq('track','Lead',{content_name:'שיחת ייעוץ אישית'});
@@ -438,8 +435,7 @@
     // אחרי הרישום, מעבר ישיר לוואטסאפ אלייך עם פרטי הליד
     var waMsg='היי מיטל, מילאתי טופס לשיחת ייעוץ.%0A'+
               'שם: '+encodeURIComponent(nm)+'%0A'+
-              'טלפון: '+encodeURIComponent(ph)+'%0A'+
-              'מייל: '+encodeURIComponent(em||'-');
+              'טלפון: '+encodeURIComponent(ph);
     window.location.href = 'https://wa.me/972543192961?text='+waMsg;
     return false;
   }
