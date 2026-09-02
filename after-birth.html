@@ -458,6 +458,23 @@
           <button type="submit">כן, אני רוצה להתחיל לדאוג גם לעצמי ›</button>
           <p class="tiny">לאחר ההרשמה תצטרפי לקבוצת הוואטסאפ של נשים אחרי לידה, ואצור איתך קשר לקביעת מועד נוח</p>
         </form>
+
+        <div id="doneCard" style="display:none">
+          <div style="text-align:center;padding:6px 0 2px">
+            <div style="font-size:44px;line-height:1">💗</div>
+            <h3 style="margin:8px 0 6px">נרשמת בהצלחה!</h3>
+            <p class="fp" style="margin-bottom:14px">נשאר שלב אחד קטן. שלחי לי הודעה בוואטסאפ ואחזור אלייך לתיאום מועד.</p>
+            <a id="waMe" href="#" target="_blank" rel="noopener"
+               style="display:block;background:#25D366;color:#fff;text-decoration:none;
+                      font-weight:800;font-size:17px;padding:15px 18px;border-radius:12px;
+                      margin-bottom:10px">שלחי לי הודעה בוואטסאפ ›</a>
+            <a id="waGroup" href="#" target="_blank" rel="noopener"
+               style="display:block;background:#fff;color:#128C7E;border:2px solid #25D366;
+                      text-decoration:none;font-weight:700;font-size:15px;padding:12px 18px;
+                      border-radius:12px">להצטרף לקבוצת נשים אחרי לידה ›</a>
+            <p class="tiny" style="margin-top:12px">אם הכפתור לא נפתח, אפשר לשמור את המספר 054-3192961 ולשלוח הודעה ישירות.</p>
+          </div>
+        </div>
       </div>
 
       <!-- WHATSAPP GROUP -->
@@ -567,23 +584,26 @@
   // Lead form -> save to Google Sheet + Rav-Messer -> redirect to WhatsApp group + thank-you
   var WHATSAPP_GROUP = 'https://chat.whatsapp.com/Hf8gOoSKTAYEBfyEORGJrz';
   var SHEETS_ENDPOINT = 'https://script.google.com/macros/s/AKfycbx-AippVj03Dg71r9o5tj4KXIPnlDcPfE7tfyiFcUuUBEQZYDBBMG978JMaNDXptQvfQg/exec';
+  var MEITAL_WA = '972543192961';
   function mbLead(e){
     e.preventDefault();
     var f=e.target;
     var nm=f.nm.value.trim(), ph=f.ph.value.trim(), em=f.em.value.trim();
     var leadId = 'L'+Date.now()+Math.floor(Math.random()*1000);
     if(window.fbq)fbq('track','Lead',{content_name:'שיחת ייעוץ - נשים אחרי לידה'});
-    // שליחת הליד לגוגל שיטס (לא חוסם את המעבר)
     if(SHEETS_ENDPOINT){
       try{ fetch(SHEETS_ENDPOINT,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},keepalive:true,
         body:JSON.stringify({action:'lead',leadId:leadId,name:nm,phone:ph,email:em,consent:true,source:'דף שיחת ייעוץ - נשים אחרי לידה'})}).catch(function(){}); }catch(err){}
     }
-    // מעבר לקבוצת הוואטסאפ של נשים אחרי לידה
-    if(WHATSAPP_GROUP && WHATSAPP_GROUP.indexOf('http')===0){
-      window.location.href = WHATSAPP_GROUP;
-    } else {
-      alert('תודה! נרשמת בהצלחה. ניצור איתך קשר בהקדם לקביעת מועד.');
-    }
+    // the message opens already tagged, so the source of the lead is obvious
+    var msg = 'נשים אחרי לידה' + '\n\n' + 'שמי ' + nm + '\n' + 'טלפון ' + ph + '\n\n' + 'השארתי פרטים בדף שיחת הייעוץ ואשמח לתאם מועד.';
+    var a = document.getElementById('waMe');
+    if(a) a.href = 'https://wa.me/' + MEITAL_WA + '?text=' + encodeURIComponent(msg);
+    var g = document.getElementById('waGroup');
+    if(g) g.href = WHATSAPP_GROUP;
+    f.style.display = 'none';
+    var d = document.getElementById('doneCard');
+    if(d){ d.style.display = 'block'; d.scrollIntoView({behavior:'smooth',block:'center'}); }
     return false;
   }
   </script>
