@@ -499,12 +499,21 @@
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
         </svg>
       </div>
-      <h1>תודה! המדריך בדרך אליכם 💚</h1>
+      <h1>המדריך שלכם מוכן 💚</h1>
       <p>
-        המדריך החינמי של מטבולייף נשלח אליכם עכשיו <strong>למייל</strong>.
-        <br>
-        בנוסף, כדאי לבדוק גם את תיקיית קידומי מכירות / ספאם, ולוודא שהמייל ממני לא התפספס.
+        אפשר להוריד אותו כאן עכשיו. שלחתי אותו גם <strong>למייל</strong>, וכדאי לבדוק
+        גם בתיקיית קידומי מכירות או ספאם כדי שהמיילים הבאים ממני לא יתפספסו.
       </p>
+
+      <div class="dl-card">
+        <img src="images/madrich-cover.png" alt="אוכלים מעט ולא יורדים במשקל" class="dl-cover">
+        <div class="dl-side">
+          <div class="dl-k">המדריך החינמי שלכם</div>
+          <div class="dl-t">אוכלים מעט ולא יורדים במשקל?</div>
+          <div class="dl-s">שמונה טעויות שיכולות לעכב את הירידה שלכם, ובסופו מבדק קצר שיראה לכם מה בדיוק עוצר אתכם.</div>
+          <a class="dl-btn" href="madrich.pdf" download>הורידו את המדריך</a>
+        </div>
+      </div>
       <p style="margin-top:12px;">
         במדריך תגלו איך להתחיל להבין למה הגוף נתקע, למה דיאטות קיצוניות גורמות לנו לרדת ואז לעלות בחזרה, ואיך אפשר להתחיל לחזור למסלול בלי רעב, בלי איסורים ובלי מלחמות עם אוכל.
       </p>
@@ -513,6 +522,32 @@
       </p>
     </div>
   </section>
+
+
+  <style id="dl-style">
+    .dl-card{display:flex;gap:20px;align-items:center;background:#fff;border-radius:20px;
+      padding:20px;margin:26px auto 0;max-width:620px;text-align:right;
+      box-shadow:0 12px 34px rgba(30,58,138,.22);}
+    .dl-cover{width:150px;border-radius:12px;flex:0 0 150px;display:block;
+      box-shadow:0 5px 16px rgba(30,58,138,.2);}
+    .dl-side{flex:1;}
+    .dl-k{font-size:13px;font-weight:800;color:#047857;letter-spacing:.3px;}
+    .dl-t{font-size:22px;font-weight:900;color:#1E3A8A;line-height:1.25;margin:3px 0 6px;}
+    .dl-s{font-size:14.5px;color:#374151;line-height:1.55;margin-bottom:14px;}
+    .dl-btn{display:block;text-align:center;text-decoration:none;color:#fff;
+      background:linear-gradient(135deg,#059669,#10B981);font-size:18px;font-weight:900;
+      padding:15px 18px;border-radius:60px;box-shadow:0 6px 18px rgba(16,185,129,.4);}
+    .promo-film{background:#0f172a;padding:44px 20px;}
+    .promo-film .wrap{max-width:620px;margin:0 auto;text-align:center;color:#fff;}
+    .promo-film h2{font-size:clamp(24px,5vw,34px);font-weight:900;margin:0 0 8px;line-height:1.25;}
+    .promo-film p{font-size:16px;opacity:.9;margin:0 0 20px;}
+    .promo-film video{width:100%;border-radius:18px;display:block;
+      box-shadow:0 14px 40px rgba(0,0,0,.5);}
+    @media (max-width:600px){
+      .dl-card{flex-direction:column;text-align:center;}
+      .dl-cover{flex:0 0 auto;width:200px;margin:0 auto;}
+    }
+  </style>
 
   <!-- ONE-TIME OFFER (UPSELL) -->
   <style id="oto-style">
@@ -626,6 +661,17 @@
   </section>
 
   <!-- WHAT NEXT -->
+  <!-- the coaching film, after the course offer -->
+  <section class="promo-film">
+    <div class="wrap">
+      <h2>ואם אתם רוצים שאלווה אתכם אישית</h2>
+      <p>שתי דקות שבהן אני מסבירה איך זה עובד, ומראה לכם אנשים שכבר עשו את זה</p>
+      <video controls preload="metadata" playsinline poster="images/madrich-cover.png">
+        <source src="videos/coach-promo.mp4" type="video/mp4">
+      </video>
+    </div>
+  </section>
+
   <section class="what-next">
     <div class="container">
       <h2 class="section-title">✨ מה לעשות עכשיו</h2>

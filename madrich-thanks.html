@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>המדריך בדרך אליכם | מטבולייף - מיטל שרים</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<!-- Meta Pixel -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','999361456096337'); fbq('track','PageView'); fbq('track','Lead');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=999361456096337&ev=PageView&noscript=1"/></noscript>
+
+<style>
+  :root {
+    --blue:#1E3A8A; --green:#10B981; --purple:#7C3AED;
+    --ink:#1f2937; --soft:#6b7280; --line:#e5e7eb; --warm:#FFF8F0;
+  }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:#eef1f7; font-family:'Heebo',Arial,sans-serif; direction:rtl;
+         color:var(--ink); line-height:1.78; font-size:17px; }
+  .wrap { max-width:720px; margin:0 auto; background:#fff; }
+
+  header { background:linear-gradient(140deg,var(--blue) 0%,var(--purple) 55%,#0F766E 100%);
+           padding:26px 24px 34px; text-align:center; color:#fff; }
+  header .logo { height:62px; background:#fff; padding:7px 11px; border-radius:12px; }
+  .tick { width:66px; height:66px; border-radius:50%; background:#fff;
+          display:flex; align-items:center; justify-content:center;
+          margin:20px auto 15px; font-size:33px; color:var(--green); font-weight:900; }
+  header h1 { font-size:clamp(25px,5.2vw,33px); font-weight:900; line-height:1.24; margin-bottom:10px; }
+  header p { font-size:16.5px; opacity:.96; max-width:520px; margin:0 auto; }
+
+  .main { padding:28px 26px 34px; }
+  .main p { margin-bottom:13px; }
+  .main p:last-child { margin-bottom:0; }
+
+  .dl { display:flex; gap:18px; align-items:center; border:2.5px solid var(--green);
+        border-radius:20px; background:#F0FDF9; padding:18px; margin-bottom:28px; }
+  .dl img { width:135px; flex:0 0 135px; border-radius:12px; display:block;
+            box-shadow:0 6px 18px rgba(30,58,138,.2); }
+  .dl .k { font-size:13px; font-weight:800; color:#047857; letter-spacing:.3px; }
+  .dl h2 { font-size:20px; font-weight:900; color:var(--blue); line-height:1.28; margin:4px 0 10px; }
+  .btn { display:block; text-align:center; text-decoration:none; color:#fff;
+         background:linear-gradient(135deg,#059669,var(--green));
+         font-size:18.5px; font-weight:900; padding:15px 18px; border-radius:60px;
+         box-shadow:0 6px 18px rgba(16,185,129,.4); }
+
+  h2.sec { font-size:clamp(22px,3.4vw,27px); font-weight:900; color:var(--blue);
+           line-height:1.28; margin:30px 0 12px; }
+
+  .asks { background:#F8FAFC; border-radius:16px; padding:18px 22px; margin:14px 0 16px; }
+  .asks .lead { font-weight:800; color:var(--blue); margin-bottom:10px; }
+  .asks ul { list-style:none; }
+  .asks li { position:relative; padding-right:26px; margin-bottom:8px; font-size:16.5px; }
+  .asks li:last-child { margin-bottom:0; }
+  .asks li:before { content:"◂"; position:absolute; right:5px; top:-1px;
+                    color:var(--purple); font-size:15px; }
+
+  .film { background:#0f172a; padding:28px 26px 30px; margin-top:8px; }
+  .film video { width:100%; max-width:520px; margin:0 auto; display:block;
+                border-radius:18px; box-shadow:0 14px 38px rgba(0,0,0,.55); background:#000; }
+  .film .more { display:block; max-width:420px; margin:16px auto 0; text-align:center;
+                text-decoration:none; color:#fff; font-weight:800; font-size:15.5px;
+                border:2px solid rgba(255,255,255,.5); border-radius:50px; padding:12px; }
+
+  .me { display:flex; gap:18px; align-items:center; background:var(--warm);
+        border:1.5px solid #FCE7CF; border-radius:18px; padding:18px 20px; margin-top:8px; }
+  .me .face { flex:0 0 100px; width:100px; height:100px; border-radius:50%;
+              overflow:hidden; box-shadow:0 5px 16px rgba(30,58,138,.18); }
+  .me .face img { width:100%; height:100%; object-fit:cover;
+                  object-position:50% 12%; display:block; }
+
+  .last { background:linear-gradient(140deg,var(--blue),var(--purple) 62%,#0F766E);
+          color:#fff; padding:28px 26px 30px; margin-top:26px; }
+  .last h2 { font-size:clamp(22px,3.6vw,28px); font-weight:900; margin-bottom:12px; line-height:1.3; }
+  .last p { margin-bottom:12px; opacity:.97; }
+  .last .quote { background:rgba(255,255,255,.15); border-radius:14px;
+                 padding:14px 18px; font-size:19px; font-weight:800; margin:14px 0; }
+  .last p:last-child { margin-bottom:0; }
+
+  .wa { display:block; text-decoration:none; margin:26px; background:#25D366;
+        color:#fff; border-radius:18px; padding:18px; text-align:center; }
+  .wa .h { font-size:18.5px; font-weight:900; margin-bottom:4px; }
+  .wa .s { font-size:14.5px; opacity:.96; }
+
+  .contact { display:grid; grid-template-columns:1fr 1fr; gap:11px; padding:0 26px; }
+  .contact a { text-decoration:none; text-align:center; border-radius:14px; padding:14px 10px;
+               font-size:15px; font-weight:700; border:2px solid var(--line);
+               color:var(--blue); background:#fff; }
+
+  footer { background:linear-gradient(135deg,var(--blue),var(--purple));
+           color:#fff; text-align:center; padding:22px; margin-top:26px; }
+  footer .n { font-size:16px; font-weight:800; }
+  footer .r { font-size:13.5px; opacity:.92; margin-top:2px; }
+
+  @media (max-width:600px){
+    .dl { flex-direction:column; text-align:center; }
+    .dl img { flex:0 0 auto; width:190px; margin:0 auto; }
+    .me { flex-direction:column; text-align:center; }
+    .contact { grid-template-columns:1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <img class="logo" src="images/metabolife-logo.png" alt="מטבולייף">
+    <div class="tick">✓</div>
+    <h1>🎉 מעולה! המדריך בדרך אליכם</h1>
+    <p>עשיתם עכשיו צעד ראשון בדרך להבין מה באמת עוצר את הירידה שלכם במשקל, ומה אפשר להתחיל לעשות אחרת.</p>
+  </header>
+
+  <div class="main">
+
+    <div class="dl">
+      <img src="images/madrich-cover.png" alt="אוכלים מעט ולא יורדים במשקל">
+      <div>
+        <div class="k">המדריך החינמי שלכם</div>
+        <h2>אפשר להוריד אותו כאן עכשיו</h2>
+        <a class="btn" href="madrich.pdf" download>הורידו את המדריך</a>
+      </div>
+    </div>
+
+    <p>המדריך החינמי יישלח אליכם עם כל הפרטים שהכנתי עבורכם.</p>
+
+    <h2 class="sec">לפני שאתם ממשיכים...</h2>
+    <p>אני רוצה לבקש מכם משהו קטן: <strong>אל תשמרו את המדריך ל"אחר כך".</strong></p>
+    <p>פתחו אותו, עברו עליו ובדקו תוך כדי:</p>
+
+    <div class="asks">
+      <div class="lead">איפה אני מזהה את עצמי?</div>
+      <ul>
+        <li>האם אתם אוכלים מעט מדי במהלך היום?</li>
+        <li>האם החשקים משתלטים דווקא בערב?</li>
+        <li>האם אכילה רגשית מוציאה אתכם מהמסלול?</li>
+        <li>או שאולי חריגה אחת גורמת לכם לחשוב שהרסנו הכול, ולהמשיך לאכול?</li>
+      </ul>
+    </div>
+
+    <p>המטרה של המדריך היא לא לתת לכם עוד רשימת חוקים. המטרה היא לעזור לכם להבין מה גורם לכם להיתקע שוב ושוב, ואיפה כדאי להתחיל את השינוי.</p>
+
+    <h2 class="sec">ויש לי עוד משהו קטן בשבילכם 🎥</h2>
+    <p>הכנתי לכם גם סרטון קצר שבו אני מסבירה על חילוף חומרים, אכילה רגשית וניהול חריגות, ולמה לפעמים הבעיה היא לא שאנחנו "לא מספיק חזקים", אלא שהדרך שבה ניסינו לרדת במשקל פשוט לא מאפשרת לנו להתמיד.</p>
+  </div>
+
+  <section class="film">
+    <video controls preload="metadata" playsinline poster="images/madrich-cover.png">
+      <source src="videos/coach-promo.mp4" type="video/mp4">
+    </video>
+    <a class="more" href="coaching.html">לפרטים על תכנית הליווי</a>
+  </section>
+
+  <div class="main">
+    <h2 class="sec">נעים להכיר, אני מיטל ❤️</h2>
+    <div class="me">
+      <div class="face"><img src="images/meital-kitchen.jpg" alt="מיטל שרים"></div>
+      <div>
+        <p>אני נטורופתית, מאמנת לתזונה ומאמנת כושר, עם 15 שנות ניסיון ויותר מ-5,000 אנשים שליוויתי.</p>
+        <p>גם אני עברתי את הדרך הזאת בעצמי. אחרי ההריונות ירדתי 25 ק"ג, והיום כבר 6 שנים אני שומרת על התוצאה.</p>
+      </div>
+    </div>
+    <p style="margin-top:14px">מתוך הניסיון האישי והמקצועי שלי הקמתי את מטבולייף, בית הספר לחילוף חומרים, כדי לעזור לאנשים לצאת ממעגל הדיאטות ולבנות דרך שאפשר לחיות איתה לאורך זמן.</p>
+  </div>
+
+  <section class="last">
+    <h2>ועכשיו, לכו לפתוח את המדריך ❤️</h2>
+    <p>אל תחפשו לעשות הכול מושלם. בחרו אפילו דבר אחד שאתם מזהים במדריך ואומרים עליו:</p>
+    <div class="quote">"את זה אני מתחיל או מתחילה לשנות."</div>
+    <p>כי שינוי אמיתי לא מתחיל מעוד דיאטה. הוא מתחיל כשמבינים מה עוצר אותנו, ולומדים מה לעשות אחרת.</p>
+  </section>
+
+  <a class="wa" href="https://chat.whatsapp.com/K32WEGIxCBQJop8mXFEHVZ" target="_blank" rel="noopener">
+    <div class="h">הצטרפו לקבוצת הוואטסאפ שלי</div>
+    <div class="s">טיפים על תזונה שמזרזת חילוף חומרים, בלי דיאטות ובלי סבל</div>
+  </a>
+
+  <div class="contact">
+    <a href="https://wa.me/972543192961">כתבו לי בוואטסאפ</a>
+    <a href="tel:0543192961">054-3192961</a>
+  </div>
+
+  <footer>
+    <div class="n">באהבה רבה, מיטל שרים</div>
+    <div class="r">נטורופתית, מאמנת תזונה ומדריכת אירובי · מטבולייף</div>
+    <div class="r">054-3192961 · naturaliving.co.il</div>
+  </footer>
+
+</div>
+</body>
+</html>
