@@ -596,7 +596,7 @@
         body:JSON.stringify({action:'lead',leadId:leadId,name:nm,phone:ph,email:em,consent:true,source:'דף שיחת ייעוץ - נשים אחרי לידה'})}).catch(function(){}); }catch(err){}
     }
     // the message opens already tagged, so the source of the lead is obvious
-    var msg = 'נשים אחרי לידה' + '\n\n' + 'שמי ' + nm + '\n' + 'טלפון ' + ph + '\n\n' + 'השארתי פרטים בדף שיחת הייעוץ ואשמח לתאם מועד.';
+    var msg = 'שיחת ייעוץ נשים אחרי לידה' + '\n\n' + 'שמי ' + nm + '\n' + 'טלפון ' + ph + '\n\n' + 'השארתי פרטים בדף שיחת הייעוץ ואשמח לתאם מועד.';
     var a = document.getElementById('waMe');
     if(a) a.href = 'https://wa.me/' + MEITAL_WA + '?text=' + encodeURIComponent(msg);
     var g = document.getElementById('waGroup');
