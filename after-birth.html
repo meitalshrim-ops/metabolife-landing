@@ -452,9 +452,7 @@
           <input id="nm" name="nm" type="text" required>
           <label for="ph">טלפון</label>
           <input id="ph" name="ph" type="tel" required>
-          <label for="em">דוא"ל</label>
-          <input id="em" name="em" type="email" required>
-          <label class="consent"><input id="consent" type="checkbox" required><span>אני מאשרת קבלת תכנים, טיפים ועדכונים ממיטל שרים במייל ובוואטסאפ.</span></label>
+          <label class="consent"><input id="consent" type="checkbox" required><span>אני מאשרת קבלת תכנים, טיפים ועדכונים ממיטל שרים בוואטסאפ.</span></label>
           <button type="submit">כן, אני רוצה להתחיל לדאוג גם לעצמי ›</button>
           <p class="tiny">לאחר ההרשמה תצטרפי לקבוצת הוואטסאפ של נשים אחרי לידה, ואצור איתך קשר לקביעת מועד נוח</p>
         </form>
@@ -588,7 +586,7 @@
   function mbLead(e){
     e.preventDefault();
     var f=e.target;
-    var nm=f.nm.value.trim(), ph=f.ph.value.trim(), em=f.em.value.trim();
+    var nm=f.nm.value.trim(), ph=f.ph.value.trim(), em='';
     var leadId = 'L'+Date.now()+Math.floor(Math.random()*1000);
     if(window.fbq)fbq('track','Lead',{content_name:'שיחת ייעוץ - נשים אחרי לידה'});
     if(SHEETS_ENDPOINT){
