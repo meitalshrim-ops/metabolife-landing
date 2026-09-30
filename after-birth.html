@@ -453,7 +453,7 @@
           <label for="ph">טלפון</label>
           <input id="ph" name="ph" type="tel" required>
           <button type="submit">כן, אני רוצה להתחיל לדאוג גם לעצמי ›</button>
-          <p class="tiny">לאחר ההרשמה תצטרפי לקבוצת הוואטסאפ של נשים אחרי לידה, ואצור איתך קשר לקביעת מועד נוח</p>
+          <p class="tiny">מיד אחרי השליחה ייפתח וואטסאפ עם הודעה מוכנה, ואחזור אלייך לתיאום מועד נוח</p>
         </form>
 
         <div id="doneCard" style="display:none">
@@ -465,17 +465,13 @@
                style="display:block;background:#25D366;color:#fff;text-decoration:none;
                       font-weight:800;font-size:17px;padding:15px 18px;border-radius:12px;
                       margin-bottom:10px">שלחי לי הודעה בוואטסאפ ›</a>
-            <a id="waGroup" href="#" target="_blank" rel="noopener"
-               style="display:block;background:#fff;color:#128C7E;border:2px solid #25D366;
-                      text-decoration:none;font-weight:700;font-size:15px;padding:12px 18px;
-                      border-radius:12px">להצטרף לקבוצת נשים אחרי לידה ›</a>
             <p class="tiny" style="margin-top:12px">אם הכפתור לא נפתח, אפשר לשמור את המספר 054-3192961 ולשלוח הודעה ישירות.</p>
           </div>
         </div>
       </div>
 
-      <!-- WHATSAPP GROUP -->
-      <div class="wagroup">
+      <!-- WHATSAPP GROUP - hidden 01/10/2026 at her request: one path only, straight to her -->
+      <div class="wagroup" style="display:none">
         <h3>קבוצת הוואטסאפ של נשים אחרי לידה</h3>
         <p>אחרי ההרשמה מצטרפות לקבוצת הוואטסאפ המיוחדת שלי לנשים אחרי לידה, עם טיפים, תמיכה וליווי בדרך חזרה לעצמך.</p>
         <a class="cbtn wa" href="https://chat.whatsapp.com/Hf8gOoSKTAYEBfyEORGJrz" target="_blank" rel="noopener">
@@ -596,9 +592,10 @@
     var msg = 'שיחת ייעוץ נשים אחרי לידה' + '\n\n' + 'שמי ' + nm + '\n' + 'טלפון ' + ph + '\n\n' + 'השארתי פרטים בדף שיחת הייעוץ ואשמח לתאם מועד.';
     var a = document.getElementById('waMe');
     if(a) a.href = 'https://wa.me/' + MEITAL_WA + '?text=' + encodeURIComponent(msg);
-    var g = document.getElementById('waGroup');
-    if(g) g.href = WHATSAPP_GROUP;
     f.style.display = 'none';
+    // open WhatsApp straight away; the green button stays as a fallback for
+    // in-app browsers that block a programmatic window.open
+    try{ window.open(a ? a.href : ('https://wa.me/' + MEITAL_WA + '?text=' + encodeURIComponent(msg)), '_blank'); }catch(err){}
     var d = document.getElementById('doneCard');
     if(d){ d.style.display = 'block'; d.scrollIntoView({behavior:'smooth',block:'center'}); }
     return false;
