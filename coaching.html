@@ -501,14 +501,23 @@
     }
     boxes.forEach(function(b){b.addEventListener('change',upd);});
   })();
-  // Lead form -> WhatsApp only (no Google Sheets, no Rav-Messer) - per Meital 2026-07-20
+  // Lead form -> Google Sheet + WhatsApp. The sheet was added 2026-10-01: with WhatsApp
+  // alone, a lead who never tapped the green button (common in the Facebook in-app
+  // browser) left no name and no phone, so Meital could not call her back.
   // Show a tappable WhatsApp button instead of auto-redirect: works reliably on mobile
   // and inside the Facebook in-app browser, where JS redirects to wa.me often fail.
+  var SHEETS_ENDPOINT = 'https://script.google.com/macros/s/AKfycbx-AippVj03Dg71r9o5tj4KXIPnlDcPfE7tfyiFcUuUBEQZYDBBMG978JMaNDXptQvfQg/exec';
   function mbLead(e){
     e.preventDefault();
     var f=e.target;
     var nm=f.nm.value.trim(), ph=f.ph.value.trim();
     if(window.fbq)fbq('track','Lead',{content_name:'טופס ליווי אישי'});
+    // the lead is written the moment she submits, before WhatsApp is involved
+    if(SHEETS_ENDPOINT){
+      try{ fetch(SHEETS_ENDPOINT,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},keepalive:true,
+        body:JSON.stringify({action:'lead',leadId:'L'+Date.now()+Math.floor(Math.random()*1000),
+        name:nm,phone:ph,email:'',consent:true,source:'דף ליווי אישי'})}).catch(function(){}); }catch(err){}
+    }
     var msg='היי מיטל, אשמח לשיחת התאמה אישית לליווי.%0A'+
             'שם: '+encodeURIComponent(nm)+'%0A'+
             'טלפון: '+encodeURIComponent(ph);
