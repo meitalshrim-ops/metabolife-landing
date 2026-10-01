@@ -593,9 +593,6 @@
     var a = document.getElementById('waMe');
     if(a) a.href = 'https://wa.me/' + MEITAL_WA + '?text=' + encodeURIComponent(msg);
     f.style.display = 'none';
-    // open WhatsApp straight away; the green button stays as a fallback for
-    // in-app browsers that block a programmatic window.open
-    try{ window.open(a ? a.href : ('https://wa.me/' + MEITAL_WA + '?text=' + encodeURIComponent(msg)), '_blank'); }catch(err){}
     var d = document.getElementById('doneCard');
     if(d){ d.style.display = 'block'; d.scrollIntoView({behavior:'smooth',block:'center'}); }
     return false;
