@@ -421,12 +421,16 @@
     var f=e.target;
     var nm=f.nm.value.trim(), ph=f.ph.value.trim(), em='';
     var leadId = 'L'+Date.now()+Math.floor(Math.random()*1000);
+    // ?from=madrich means she came off the free guide's thank-you page rather
+    // than off an ad, which is worth knowing before Meital calls her back.
+    var fromGuide = /[?&]from=madrich/.test(location.search);
+    var leadSource = fromGuide ? 'דף שיחת ייעוץ (מהמדריך)' : 'דף שיחת ייעוץ';
     try{ sessionStorage.setItem('mb_lead', JSON.stringify({nm:nm, ph:ph, em:em, leadId:leadId})); }catch(err){}
     if(window.fbq)fbq('track','Lead',{content_name:'שיחת ייעוץ אישית'});
     // שליחת הליד לגוגל שיטס (לא חוסם את המעבר לוואטסאפ)
     if(SHEETS_ENDPOINT){
       try{ fetch(SHEETS_ENDPOINT,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},keepalive:true,
-        body:JSON.stringify({action:'lead',leadId:leadId,name:nm,phone:ph,email:em,consent:true,source:'דף שיחת ייעוץ'})}).catch(function(){}); }catch(err){}
+        body:JSON.stringify({action:'lead',leadId:leadId,name:nm,phone:ph,email:em,consent:true,source:leadSource})}).catch(function(){}); }catch(err){}
     }
     // רישום לרשימת "מתעניינים בליווי" ברב מסר (דרך פרוקסי Vercel, לא חוסם את המעבר)
     try{ fetch('https://metabolife-landing.vercel.app/api/subscribe',{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},keepalive:true,
@@ -435,6 +439,7 @@
     // בדפדפן הפנימי של פייסבוק/וואטסאפ הפניה אוטומטית לא אמינה, ולכן מציגים
     // גם כפתור ללחיצה. אותה גישה בדיוק כמו ב-coaching.html.
     var waMsg='היי מיטל, מילאתי טופס לשיחת ייעוץ.%0A'+
+              (fromGuide ? 'הגעתי מהמדריך.%0A' : '')+
               'שם: '+encodeURIComponent(nm)+'%0A'+
               'טלפון: '+encodeURIComponent(ph);
     var wa = 'https://wa.me/972543192961?text='+waMsg;
