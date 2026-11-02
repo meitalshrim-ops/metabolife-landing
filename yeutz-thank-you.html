@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>כמעט סיימנו | שיחת ייעוץ עם מיטל שרים | מטבולייף</title>
+  <meta name="robots" content="noindex" />
+
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init','1113357764518871');fbq('track','PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1113357764518871&ev=PageView&noscript=1"/></noscript>
+  <!-- End Meta Pixel Code -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root{--blue:#1E3A8A;--blue-dark:#172554;--green:#10B981;--purple:#7C3AED;--cream:#FAF7F2;}
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:"Heebo",system-ui,sans-serif;background:var(--cream);color:var(--blue);line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden;min-height:100vh;display:flex;flex-direction:column;}
+    img{max-width:100%;display:block;} a{text-decoration:none;}
+    main{flex:1;}
+
+    .header{background:#fff;border-bottom:1px solid rgba(30,58,138,0.05);padding:12px 0;}
+    .header img{height:64px;width:auto;object-fit:contain;margin:0 auto;}
+    @media(max-width:640px){.header img{height:52px;}}
+
+    .hero{background:linear-gradient(135deg,var(--blue) 0%,var(--purple) 52%,var(--green) 100%);color:#fff;text-align:center;padding:34px 20px 84px;}
+    .vmark{width:68px;height:68px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;box-shadow:0 14px 34px rgba(0,0,0,.24);}
+    .vmark svg{width:36px;height:36px;color:var(--green);}
+    .hero h1{font-size:clamp(27px,5vw,40px);font-weight:900;line-height:1.2;}
+
+    .card{background:#fff;border-radius:24px;padding:30px 24px;max-width:560px;margin:-58px auto 0;width:calc(100% - 32px);box-shadow:0 26px 64px -22px rgba(124,58,237,.4);border-top:6px solid var(--green);text-align:center;position:relative;}
+    .card p{font-size:18px;line-height:1.6;color:rgba(30,58,138,.82);margin-bottom:22px;}
+    .wa-btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;padding:17px;border-radius:999px;font-size:18px;font-weight:900;color:#fff;background:linear-gradient(135deg,#25D366,#128C7E);box-shadow:0 16px 36px -8px rgba(37,211,102,.6);}
+    .wa-btn svg{width:22px;height:22px;flex-shrink:0;}
+    .card .tiny{font-size:13.5px;color:rgba(30,58,138,.6);margin:12px 0 0;}
+
+    .signoff{text-align:center;padding:30px 20px 34px;}
+    .signoff img{width:112px;height:112px;border-radius:50%;object-fit:cover;object-position:50% 12%;margin:0 auto 12px;box-shadow:0 10px 26px -10px rgba(30,58,138,.5);}
+    .signoff .it{font-style:italic;color:rgba(30,58,138,.7);font-size:15px;}
+    .signoff .nm{font-size:20px;font-weight:900;margin-top:2px;}
+    .signoff .role{font-size:13.5px;color:rgba(30,58,138,.6);margin-top:3px;}
+    .footer{background:var(--blue-dark);color:rgba(255,255,255,.55);padding:20px;text-align:center;font-size:13px;}
+    .footer .tag{font-size:15px;color:rgba(255,255,255,.85);font-weight:600;margin-bottom:6px;}
+  </style>
+</head>
+<body>
+
+  <header class="header"><img src="images/metabolife-logo.png" alt="מטבולייף"></header>
+
+  <main>
+    <section class="hero">
+      <div class="vmark"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></div>
+      <h1><span id="firstName"></span>כמעט סיימנו! 💚</h1>
+    </section>
+
+    <div class="card">
+      <p>נשאר צעד אחד קטן. לחצו על הכפתור כדי לשלוח לי את הפרטים בוואטסאפ, ואחזור אליכם אישית.</p>
+      <a id="waBtn" class="wa-btn" href="https://wa.me/972543192961?text=%D7%94%D7%99%D7%99%20%D7%9E%D7%99%D7%98%D7%9C%2C%20%D7%9E%D7%99%D7%9C%D7%90%D7%AA%D7%99%20%D7%98%D7%95%D7%A4%D7%A1%20%D7%9C%D7%A9%D7%99%D7%97%D7%AA%20%D7%99%D7%99%D7%A2%D7%95%D7%A5." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.477-.913z"/></svg>שלחו לי את הפרטים בוואטסאפ</a>
+      <p class="tiny">אם וואטסאפ לא נפתח אוטומטית, לחצו על הכפתור הירוק</p>
+    </div>
+
+    <div class="signoff">
+      <img src="images/meital-thanks.jpg" alt="מיטל שרים">
+      <p class="it">באהבה רבה,</p>
+      <p class="nm">מיטל שרים</p>
+      <p class="role">נטורופתית, מאמנת תזונה ומדריכת כושר | מטבולייף</p>
+    </div>
+  </main>
+
+  <footer class="footer"><p class="tag">תזונה • תנועה • בריאות</p><p>© 2026 מטבולייף - מיטל שרים. כל הזכויות שמורות.</p></footer>
+
+  <script>
+  // The form page saves the lead and passes it here: ?lead=<id> in the address, the rest
+  // (name, WhatsApp link) in sessionStorage so nothing personal goes into the URL.
+  (function(){
+    var lead={};
+    try{ lead=JSON.parse(sessionStorage.getItem('mb_lead')||'{}'); }catch(err){}
+    var btn=document.getElementById('waBtn');
+    if(lead.wa) btn.href=lead.wa;
+    var first=(lead.nm||'').split(/\s+/)[0];
+    if(first) document.getElementById('firstName').textContent=first+', ';
+
+    // Lead fires once per submission. No ?lead= means someone opened this page directly,
+    // and a refresh finds the id already marked as sent.
+    var m=location.search.match(/[?&]lead=(\w+)/), leadId=m?m[1]:'', key='mb_lead_sent_'+leadId, sent=false;
+    try{ sent=sessionStorage.getItem(key)==='1'; }catch(err){}
+    if(leadId && !sent && window.fbq){
+      fbq('track','Lead',{content_name:'שיחת ייעוץ אישית'},{eventID:leadId});
+      try{ sessionStorage.setItem(key,'1'); }catch(err){}
+    }
+    btn.addEventListener('click',function(){ if(window.fbq)fbq('track','Contact',{content_name:'וואטסאפ שיחת ייעוץ'}); });
+  })();
+  </script>
+
+</body>
+</html>
